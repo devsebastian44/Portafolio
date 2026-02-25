@@ -3,6 +3,11 @@
 ---
 
 <section id="lab" class="py-24 relative overflow-hidden bg-transparent">
+    <!-- Lab Background Glow -->
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#00ffa3]/5 blur-[100px] rounded-full pointer-events-none z-0"
+    >
+    </div>
     <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-7xl mx-auto">
             <!-- Header -->
@@ -401,12 +406,18 @@
                                 </div>
                             </div>
                             <div
-                                class="text-center p-3 border border-[#00ffa3]/20 bg-[#00ffa3]/5 rounded-xl"
+                                class="flex items-center justify-center py-2.5 px-4 border border-[#00ffa3]/20 bg-[#00ffa3]/5 rounded-xl group/status hover:border-[#00ffa3]/40 transition-colors"
                             >
-                                <span
-                                    class="text-[10px] font-mono text-[#00ffa3] uppercase tracking-[0.3em]"
-                                    >Status: Production</span
-                                >
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-1.5 h-1.5 rounded-full bg-[#00ffa3] animate-pulse shadow-[0_0_8px_rgba(0,255,163,0.6)]"
+                                    >
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-[#00ffa3] font-bold uppercase tracking-[0.2em]"
+                                        >Status: Production</span
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>

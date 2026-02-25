@@ -1,0 +1,109 @@
+---
+/**
+ * Componente CustomCursor
+ * Implementa un efecto de cursor cyberpunk con un punto central y un círculo con interpolación.
+ */
+---
+
+<div id="cursor-dot" class="custom-cursor-dot"></div>
+<div id="cursor-outline" class="custom-cursor-outline"></div>
+
+<style is:global>
+    /* Mantenemos el cursor estándar pero añadimos el efecto visual */
+
+    .custom-cursor-dot,
+    .custom-cursor-outline {
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: 99999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .custom-cursor-dot {
+        width: 6px;
+        height: 6px;
+        background-color: #00ffa3;
+        box-shadow: 0 0 10px #00ffa3;
+    }
+
+    .custom-cursor-outline {
+        width: 34px;
+        height: 34px;
+        border: 1px solid #00ffa3;
+        box-shadow: 0 0 15px rgba(0, 255, 163, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Efecto al hacer click */
+    .cursor-clicking .custom-cursor-outline {
+        transform: scale(0.8);
+        background-color: rgba(0, 255, 163, 0.1);
+    }
+</style>
+
+<script>
+    const dot = document.getElementById("cursor-dot");
+    const outline = document.getElementById("cursor-outline");
+
+    if (dot && outline) {
+        let dotX = 0;
+        let dotY = 0;
+        let outlineX = 0;
+        let outlineY = 0;
+
+        // Velocidad de seguimiento del círculo exterior (interpolación)
+        const speed = 0.2;
+
+        window.addEventListener("mousemove", (e) => {
+            dotX = e.clientX;
+            dotY = e.clientY;
+
+            // Asegurar visibilidad al mover
+            dot.style.opacity = "1";
+            outline.style.opacity = "1";
+
+            // Posicionar el punto instantáneamente
+            dot.style.transform = `translate(${dotX - 3}px, ${dotY - 3}px)`;
+        });
+
+        // Animación fluida para el círculo exterior
+        const animate = () => {
+            const distX = dotX - outlineX;
+            const distY = dotY - outlineY;
+
+            outlineX = outlineX + distX * speed;
+            outlineY = outlineY + distY * speed;
+
+            outline.style.transform = `translate(${outlineX - 17}px, ${outlineY - 17}px)`;
+
+            requestAnimationFrame(animate);
+        };
+
+        animate();
+
+        // Efectos de click
+        window.addEventListener("mousedown", () =>
+            document.body.classList.add("cursor-clicking"),
+        );
+        window.addEventListener("mouseup", () =>
+            document.body.classList.remove("cursor-clicking"),
+        );
+
+        // Detectar cuando el mouse entra/sale de la ventana del navegador de forma robusta
+        document.addEventListener("mouseenter", () => {
+            dot.style.opacity = "1";
+            outline.style.opacity = "1";
+        });
+
+        document.addEventListener("mouseleave", () => {
+            dot.style.opacity = "0";
+            outline.style.opacity = "0";
+        });
+    }
+</script>
