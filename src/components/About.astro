@@ -51,14 +51,54 @@ const iconMap: Record<string, string> = {
     Supabase:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
     Postman: "https://cdn.simpleicons.org/postman/FF6C37",
-    AWS: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-    GitHub: "https://cdn.simpleicons.org/github/white",
+    AWS: "https://cdn.simpleicons.org/amazonaws/232F3E",
+    GitHub: "https://cdn.simpleicons.org/github/181717",
     GitLab: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
     Linux: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
-    Vercel: "https://cdn.simpleicons.org/vercel/FFFFFF",
+    Vercel: "https://cdn.simpleicons.org/vercel/000000",
     Obsidian: "https://cdn.simpleicons.org/obsidian/483699",
-    "Next.js": "https://cdn.simpleicons.org/nextdotjs/white",
-    Prisma: "https://cdn.simpleicons.org/prisma/5A67D8",
+    "Next.js": "https://cdn.simpleicons.org/nextdotjs/000000",
+    Prisma: "https://cdn.simpleicons.org/prisma/2D3748",
+};
+
+const sphereIconMap: Record<string, string> = {
+    HTML5: "https://cdn.simpleicons.org/html5/FFFFFF",
+    JavaScript: "https://cdn.simpleicons.org/javascript/FFFFFF",
+    TypeScript: "https://cdn.simpleicons.org/typescript/FFFFFF",
+    React: "https://cdn.simpleicons.org/react/FFFFFF",
+    Angular: "https://cdn.simpleicons.org/angular/FFFFFF",
+    Astro: "https://cdn.simpleicons.org/astro/FFFFFF",
+    Bootstrap: "https://cdn.simpleicons.org/bootstrap/FFFFFF",
+    TailwindCSS: "https://cdn.simpleicons.org/tailwindcss/FFFFFF",
+    jQuery: "https://cdn.simpleicons.org/jquery/FFFFFF",
+    "Node.js": "https://cdn.simpleicons.org/nodedotjs/FFFFFF",
+    Laravel: "https://cdn.simpleicons.org/laravel/FFFFFF",
+    PHP: "https://cdn.simpleicons.org/php/FFFFFF",
+    Python: "https://cdn.simpleicons.org/python/FFFFFF",
+    PostgreSQL: "https://cdn.simpleicons.org/postgresql/FFFFFF",
+    MySQL: "https://cdn.simpleicons.org/mysql/FFFFFF",
+    MongoDB: "https://cdn.simpleicons.org/mongodb/FFFFFF",
+    Pandas: "https://cdn.simpleicons.org/pandas/FFFFFF",
+    "Google Colab": "https://cdn.simpleicons.org/googlecolab/FFFFFF",
+    Git: "https://cdn.simpleicons.org/git/FFFFFF",
+    Docker: "https://cdn.simpleicons.org/docker/FFFFFF",
+    Jenkins: "https://cdn.simpleicons.org/jenkins/FFFFFF",
+    Bash: "https://cdn.simpleicons.org/gnubash/FFFFFF",
+    Figma: "https://cdn.simpleicons.org/figma/FFFFFF",
+    Kotlin: "https://cdn.simpleicons.org/kotlin/FFFFFF",
+    Go: "https://cdn.simpleicons.org/go/FFFFFF",
+    Elixir: "https://cdn.simpleicons.org/elixir/FFFFFF",
+    Redis: "https://cdn.simpleicons.org/redis/FFFFFF",
+    Firebase: "https://cdn.simpleicons.org/firebase/FFFFFF",
+    Supabase: "https://cdn.simpleicons.org/supabase/FFFFFF",
+    Postman: "https://cdn.simpleicons.org/postman/FFFFFF",
+    GitHub: "https://cdn.simpleicons.org/github/FFFFFF",
+    GitLab: "https://cdn.simpleicons.org/gitlab/FFFFFF",
+    Linux: "https://cdn.simpleicons.org/linux/FFFFFF",
+    Vercel: "https://cdn.simpleicons.org/vercel/FFFFFF",
+    Obsidian: "https://cdn.simpleicons.org/obsidian/FFFFFF",
+    "Next.js": "https://cdn.simpleicons.org/nextdotjs/FFFFFF",
+    Prisma: "https://cdn.simpleicons.org/prisma/FFFFFF",
 };
 
 const skillCategories = [
@@ -132,13 +172,12 @@ const skillCategories = [
 ];
 ---
 
-<section
-    id="about"
-    class="pb-24 relative overflow-hidden bg-[#020617] border-b border-slate-700"
->
+<section id="about" class="pb-24 relative overflow-hidden bg-transparent">
     <div class="relative z-10">
         <!-- Tech Ticker -->
-        <div class="relative w-full py-4 mb-16 overflow-hidden bg-[#0f172a]">
+        <div
+            class="relative w-full py-4 mb-16 overflow-hidden bg-card !rounded-none border-x-0 border-y border-white/10"
+        >
             <!-- Continuous Marquee Container -->
             <div class="flex whitespace-nowrap animate-ticker w-max">
                 {
@@ -189,11 +228,11 @@ const skillCategories = [
             </div>
             <!-- Fade Edges -->
             <div
-                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0f172a] to-transparent z-10"
+                class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"
             >
             </div>
             <div
-                class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0f172a] to-transparent z-10"
+                class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"
             >
             </div>
         </div>
@@ -201,10 +240,10 @@ const skillCategories = [
         <!-- Header -->
         <div class="container mx-auto px-6 mb-16 text-center relative z-10">
             <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
-                Sobre <span class="text-green-500">Mí</span>
+                Sobre <span class="text-[#00ffa3]">Mí</span>
             </h2>
             <p
-                class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
+                class="text-slate-400 text-sm md:text-base max-w-3xl mx-auto leading-relaxed"
             >
                 Desarrollador apasionado con amor por el código limpio, el buen
                 café y las contribuciones al código abierto.
@@ -213,22 +252,20 @@ const skillCategories = [
 
         <div class="container mx-auto px-6">
             <!-- Dashboard Grid -->
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <!-- Bio & Photo Section -->
                 <div
                     class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4"
                 >
                     <!-- Left: Sobre mí Text -->
-                    <div
-                        class="bg-[#050505] border border-white/10 rounded-2xl p-6 relative flex flex-col shadow-2xl group"
-                    >
+                    <div class="bg-card p-6 relative flex flex-col group">
                         <div
-                            class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                            class="absolute inset-0 bg-gradient-to-br from-[#00ffa3]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
                         >
                         </div>
                         <div class="flex items-center gap-3 mb-6 relative z-10">
                             <div
-                                class="p-2.5 bg-green-500/10 rounded-xl text-green-500"
+                                class="p-2.5 bg-[#00ffa3]/10 rounded-xl text-[#00ffa3]"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -283,7 +320,7 @@ const skillCategories = [
                                 href="/CV.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="group/cv flex items-center gap-3 px-8 py-3 bg-[#0f172a] border border-white/10 rounded-xl text-white hover:border-green-500/50 hover:shadow-[0_0_20px_rgba(34,197,94,0.15)] transition-all duration-300 transform hover:-translate-y-1"
+                                class="group/cv flex items-center gap-3 px-8 py-3 bg-[#00ffa3]/10 border border-[#00ffa3]/30 rounded-xl text-[#00ffa3] hover:border-[#00ffa3]/50 hover:bg-[#00ffa3]/20 hover:shadow-[0_0_20px_rgba(0, 255, 163, 0.2)] transition-all duration-300 transform hover:-translate-y-1"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +332,7 @@ const skillCategories = [
                                     stroke-width="2"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    class="text-green-500 group-hover/cv:scale-110 transition-transform"
+                                    class="text-[#00ffa3] group-hover/cv:scale-110 transition-transform"
                                     ><path
                                         d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
                                     ></path><polyline points="14 2 14 8 20 8"
@@ -308,21 +345,212 @@ const skillCategories = [
                         </div>
                     </div>
 
-                    <!-- Right: Photo Placeholder -->
-                    <div
-                        class="bg-[#050505] border border-white/10 rounded-2xl p-6 relative flex items-center justify-center shadow-2xl group min-h-[400px] overflow-hidden"
-                    >
+                    <!-- Right: Terminal Workspace -->
+                    <div class="relative group min-h-[450px]">
+                        <!-- Main Terminal -->
                         <div
-                            class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                            class="relative bg-black border border-white/10 rounded-xl overflow-hidden shadow-2xl z-10 h-full"
                         >
+                            <!-- Terminal Header -->
+                            <div
+                                class="flex items-center justify-between px-4 py-2 bg-[#0a0a0a] border-b border-white/5 relative z-10"
+                            >
+                                <div class="flex gap-1.5">
+                                    <div
+                                        class="w-3 h-3 rounded-full bg-[#ff5f56]"
+                                    >
+                                    </div>
+                                    <div
+                                        class="w-3 h-3 rounded-full bg-[#ffbd2e]"
+                                    >
+                                    </div>
+                                    <div
+                                        class="w-3 h-3 rounded-full bg-[#27c93f]"
+                                    >
+                                    </div>
+                                </div>
+                                <div
+                                    class="text-[10px] text-slate-500 font-mono tracking-widest uppercase"
+                                >
+                                    sebastian@dev-workspace
+                                </div>
+                                <div class="w-10"></div>
+                            </div>
+
+                            <!-- Terminal Content -->
+                            <div
+                                class="p-8 text-left font-mono text-[11px] leading-relaxed flex flex-col md:flex-row gap-8 relative z-10 bg-[#0c0c0c] h-full"
+                            >
+                                <!-- ASCII Art -->
+                                <div
+                                    class="text-[#00ffa3] whitespace-pre shrink-0 font-bold opacity-90 select-none"
+                                >
+                                    {
+                                        `      _____
+     /       \\
+    |  () ()  |
+     \\   ^   /
+      |||||||
+      |||||||`
+                                    }
+                                </div>
+
+                                <!-- System Info -->
+                                <div class="space-y-4 flex-1">
+                                    <div class="mb-4">
+                                        <span class="text-amber-400 font-bold"
+                                            >sebastian@dev-workspace</span
+                                        >
+                                        <div class="text-slate-600 text-[10px]">
+                                            ------------------
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="grid grid-cols-[100px_1fr] gap-x-4 gap-y-2"
+                                    >
+                                        <div
+                                            class="text-[#00ffa3] font-bold uppercase tracking-tighter"
+                                        >
+                                            Status:
+                                        </div>
+                                        <div
+                                            class="text-white"
+                                            id="terminal-status"
+                                        >
+                                            Disponible
+                                        </div>
+
+                                        <div
+                                            class="text-[#00ffa3] font-bold uppercase tracking-tighter"
+                                        >
+                                            Áreas:
+                                        </div>
+                                        <div
+                                            class="text-white"
+                                            id="terminal-areas"
+                                        >
+                                            Prog | Ciber | Data | IA
+                                        </div>
+
+                                        <div
+                                            class="text-[#00ffa3] font-bold uppercase tracking-tighter"
+                                        >
+                                            Lenguajes:
+                                        </div>
+                                        <div
+                                            class="text-white"
+                                            id="terminal-languages"
+                                        >
+                                            Python, JS, SQL
+                                        </div>
+
+                                        <div
+                                            class="text-[#00ffa3] font-bold uppercase tracking-tighter"
+                                        >
+                                            Librerías:
+                                        </div>
+                                        <div
+                                            class="text-white"
+                                            id="terminal-libraries"
+                                        >
+                                            Numpy, Pandas, Torch
+                                        </div>
+
+                                        <div
+                                            class="text-[#00ffa3] font-bold uppercase tracking-tighter"
+                                        >
+                                            Frameworks:
+                                        </div>
+                                        <div
+                                            class="text-white"
+                                            id="terminal-frameworks"
+                                        >
+                                            React, Next.js, Astro
+                                        </div>
+
+                                        <div
+                                            class="text-[#00ffa3] font-bold uppercase tracking-tighter"
+                                        >
+                                            Shell:
+                                        </div>
+                                        <div
+                                            class="text-white"
+                                            id="terminal-shell"
+                                        >
+                                            zsh
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Photo -->
-                        <div class="absolute inset-0 p-6">
-                            <img
-                                src="/Img/Foto.jpeg"
-                                alt="Sebastian Zhunaula"
-                                class="w-full h-full object-cover rounded-xl shadow-lg transform transition-transform duration-500 group-hover:scale-105"
-                            />
+
+                        <!-- Overlaid Code Window -->
+                        <div
+                            class="absolute -right-4 -bottom-4 w-[280px] bg-[#0F1117] border border-white/10 rounded-lg shadow-2xl z-20 overflow-hidden hidden lg:block transform hover:translate-x-2 hover:translate-y-2 transition-transform duration-300"
+                        >
+                            <div
+                                class="pl-6 p-5 font-mono text-[10px] text-left leading-relaxed text-slate-300"
+                            >
+                                <div class="mb-2">
+                                    <span class="text-purple-400">import</span> React
+                                    <span class="text-purple-400">from</span>
+                                    <span class="text-green-400">'react'</span>;
+                                </div>
+                                <div class="mb-2">
+                                    <span class="text-purple-400">const</span>
+                                    <span class="text-yellow-300"
+                                        >DevWorkspace</span
+                                    > = () => &#123;
+                                </div>
+                                <div class="pl-4 mb-2">
+                                    <span class="text-purple-400">const</span> [state,
+                                    setState] = useState(<span
+                                        class="text-orange-400">true</span
+                                    >);
+                                </div>
+                                <div class="pl-4">
+                                    <span class="text-purple-400">return</span> (
+                                </div>
+                                <div class="pl-8">
+                                    &lt;<span class="text-blue-400">div</span> class=<span
+                                        class="text-green-400">"dev"</span
+                                    > /&gt;
+                                </div>
+                                <div class="pl-4">);</div>
+                                <div>&#125;;</div>
+                            </div>
+                        </div>
+
+                        <!-- Coffee Status -->
+                        <div
+                            class="absolute -left-4 -bottom-4 z-30 bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-2 flex items-center gap-3 shadow-xl transform hover:-translate-y-1 transition-transform"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="#f97316"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path
+                                    d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"
+                                ></path><line x1="6" x2="6" y1="2" y2="4"
+                                ></line><line x1="10" x2="10" y1="2" y2="4"
+                                ></line><line x1="14" x2="14" y1="2" y2="4"
+                                ></line></svg
+                            >
+                            <span
+                                class="text-[9px] font-bold text-slate-400 tracking-widest uppercase"
+                                >COFFEE_DEBUGGING</span
+                            >
+                            <div
+                                class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"
+                            >
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -333,7 +561,7 @@ const skillCategories = [
                         class="flex items-center gap-3 mb-8 relative z-10 px-2"
                     >
                         <div
-                            class="p-2.5 bg-green-500/10 rounded-xl text-green-500"
+                            class="p-2.5 bg-[#00ffa3]/10 rounded-xl text-[#00ffa3]"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -361,9 +589,9 @@ const skillCategories = [
                     >
                         {
                             skillCategories.map((category) => (
-                                <div class="bg-[#050505] border border-white/10 rounded-2xl p-5 hover:border-green-500/30 transition-all duration-300 group">
+                                <div class="bg-card p-5 hover:border-[#00ffa3]/30 group">
                                     <div class="space-y-4">
-                                        <div class="flex items-center gap-3 text-green-500/80 mb-3">
+                                        <div class="flex items-center gap-3 text-[#00ffa3]/80 mb-3">
                                             {category.icon === "layout" && (
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -553,12 +781,12 @@ const skillCategories = [
                                         </div>
                                         <div class="flex flex-wrap gap-2">
                                             {category.skills.map((skill) => (
-                                                <span class="px-2 py-1 bg-[#0f172a]/80 border border-white/5 rounded-lg text-slate-400 text-[11px] hover:border-green-500/30 hover:text-white transition-all duration-300 cursor-default flex items-center gap-2 group/chip">
+                                                <span class="tag-glass flex items-center gap-2 group/chip">
                                                     {iconMap[skill] && (
                                                         <img
                                                             src={iconMap[skill]}
                                                             alt={skill}
-                                                            class="w-3.5 h-3.5 group-hover/chip:scale-110 transition-all"
+                                                            class="w-3.5 h-3.5 group-hover/chip:scale-110 transition-all opacity-70 group-hover:opacity-100"
                                                         />
                                                     )}
                                                     {skill}
@@ -579,7 +807,6 @@ const skillCategories = [
                     <SkillSphere
                         items={[
                             "HTML5",
-                            "CSS3",
                             "JavaScript",
                             "TypeScript",
                             "React",
@@ -601,10 +828,7 @@ const skillCategories = [
                             "Bash",
                             "Figma",
                             "Kotlin",
-                            "C Sharp",
                             "Pandas",
-                            "Matplotlib",
-                            "Seaborn",
                             "Google Colab",
                             "Go",
                             "Elixir",
@@ -612,7 +836,6 @@ const skillCategories = [
                             "Supabase",
                             "Firebase",
                             "Postman",
-                            "AWS",
                             "GitHub",
                             "GitLab",
                             "Linux",
@@ -620,10 +843,105 @@ const skillCategories = [
                             "Obsidian",
                             "Next.js",
                             "Prisma",
-                        ].map((name) => ({ name, icon: iconMap[name] || "" }))}
+                        ].map((name) => ({
+                            name,
+                            icon: sphereIconMap[name] || "",
+                        }))}
                     />
                 </div>
             </div>
         </div>
     </div>
+    <style>
+        .terminal-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 14px;
+            background-color: #00ffa3;
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script>
+        const terminalValues = [
+            { id: "terminal-status", text: "Disponible" },
+            { id: "terminal-areas", text: "Prog | Ciber | Data | IA" },
+            { id: "terminal-languages", text: "Python, JS, SQL" },
+            { id: "terminal-libraries", text: "Numpy, Pandas, Torch" },
+            { id: "terminal-frameworks", text: "React, Next.js, Astro" },
+            { id: "terminal-shell", text: "zsh" },
+        ];
+
+        function typeWriter(
+            element: HTMLElement,
+            text: string,
+            speed: number = 40,
+        ) {
+            let i = 0;
+            element.innerHTML = ""; // Start empty
+            const cursor = document.createElement("span");
+            cursor.className = "terminal-cursor";
+            element.appendChild(cursor);
+
+            return new Promise<void>((resolve) => {
+                function type() {
+                    if (i < text.length) {
+                        const charNode = document.createTextNode(
+                            text.charAt(i),
+                        );
+                        element.insertBefore(charNode, cursor);
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        cursor.remove(); // Optional: remove cursor when finished
+                        resolve();
+                    }
+                }
+                type();
+            });
+        }
+
+        async function runTerminalAnimation() {
+            for (const item of terminalValues) {
+                const el = document.getElementById(item.id);
+                if (el) {
+                    await typeWriter(el, item.text);
+                }
+            }
+        }
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1,
+        };
+
+        let animationStarted = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && !animationStarted) {
+                    animationStarted = true;
+                    runTerminalAnimation();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const aboutSection = document.getElementById("about");
+        if (aboutSection) {
+            observer.observe(aboutSection);
+        }
+    </script>
 </section>

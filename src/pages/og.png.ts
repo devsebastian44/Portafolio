@@ -13,7 +13,7 @@ export const GET: APIRoute = async () => {
     const robotoFont = await fs.readFile(path.join(fontsDir, "RobotoCondensed-Regular.ttf"));
 
     // Prepare Grid Elements (Lines)
-    const step = 40;
+    const step = 50;
     const vLines = [];
     for (let x = 0; x <= 1200; x += step) {
         vLines.push({
@@ -25,7 +25,7 @@ export const GET: APIRoute = async () => {
                     top: 0,
                     bottom: 0,
                     width: "1px",
-                    backgroundColor: "rgba(100, 116, 139, 0.1)", // Slate 500 with low opacity
+                    backgroundColor: "rgba(255, 255, 255, 0.05)", // Matching bg-grid-cyber opacity
                 },
             },
         });
@@ -41,7 +41,7 @@ export const GET: APIRoute = async () => {
                     left: 0,
                     right: 0,
                     height: "1px",
-                    backgroundColor: "rgba(100, 116, 139, 0.1)",
+                    backgroundColor: "rgba(0, 255, 163, 0.05)",
                 },
             },
         });
@@ -56,11 +56,12 @@ export const GET: APIRoute = async () => {
                     flexDirection: "column",
                     width: "100%",
                     height: "100%",
-                    backgroundColor: "#020617",
+                    backgroundColor: "#000000",
                     position: "relative",
                     alignItems: "center",
                     justifyContent: "center",
                     padding: "60px",
+                    border: "1px solid rgba(255, 255, 255, 0.1)", // Liquid Glass border simulation
                 },
                 children: [
                     // Grid Background
@@ -77,7 +78,7 @@ export const GET: APIRoute = async () => {
                                 transform: "translate(-50%, -50%)",
                                 width: "1200px",
                                 height: "800px",
-                                background: "radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 60%)",
+                                background: "radial-gradient(circle, rgba(0, 255, 163, 0.15) 0%, transparent 60%)",
                             },
                         },
                     },
@@ -93,7 +94,7 @@ export const GET: APIRoute = async () => {
                                 letterSpacing: "-0.04em",
                                 fontWeight: "bold",
                             },
-                            children: "DevSebastian44",
+                            children: "Sebastian Zhunaula",
                         },
                     },
                     {
@@ -101,13 +102,13 @@ export const GET: APIRoute = async () => {
                         props: {
                             style: {
                                 fontSize: "36px",
-                                color: "#22c55e",
+                                color: "#00ffa3",
                                 fontFamily: "Aldrich",
                                 margin: "0 0 10px 0",
                                 fontWeight: "bold",
                                 letterSpacing: "0.02em",
                             },
-                            children: "Technology Specialist",
+                            children: "Tech Enthusiast",
                         },
                     },
                     // Skills Bar
@@ -133,7 +134,7 @@ export const GET: APIRoute = async () => {
                                                     height: "32",
                                                     viewBox: "0 0 24 24",
                                                     fill: "none",
-                                                    stroke: "#94a3b8",
+                                                    stroke: "#00ffa3",
                                                     strokeWidth: "2",
                                                     strokeLinecap: "round",
                                                     strokeLinejoin: "round",
@@ -147,13 +148,13 @@ export const GET: APIRoute = async () => {
                                                 type: "span",
                                                 props: {
                                                     style: { fontSize: "30px", color: "#94a3b8", fontFamily: "Roboto Condensed" },
-                                                    children: "Software Development",
+                                                    children: "Web Dev",
                                                 },
                                             },
                                         ],
                                     },
                                 },
-                                { type: "span", props: { style: { color: "#334155", fontSize: "28px" }, children: "·" } },
+                                { type: "span", props: { style: { color: "rgba(255,255,255,0.2)", fontSize: "28px" }, children: "·" } },
                                 // Cybersecurity
                                 {
                                     type: "div",
@@ -167,7 +168,7 @@ export const GET: APIRoute = async () => {
                                                     height: "32",
                                                     viewBox: "0 0 24 24",
                                                     fill: "none",
-                                                    stroke: "#94a3b8",
+                                                    stroke: "#00ffa3",
                                                     strokeWidth: "2",
                                                     strokeLinecap: "round",
                                                     strokeLinejoin: "round",
@@ -186,7 +187,7 @@ export const GET: APIRoute = async () => {
                                         ],
                                     },
                                 },
-                                { type: "span", props: { style: { color: "#334155", fontSize: "28px" }, children: "·" } },
+                                { type: "span", props: { style: { color: "rgba(255,255,255,0.2)", fontSize: "28px" }, children: "·" } },
                                 // Data Science
                                 {
                                     type: "div",
@@ -200,7 +201,7 @@ export const GET: APIRoute = async () => {
                                                     height: "32",
                                                     viewBox: "0 0 24 24",
                                                     fill: "none",
-                                                    stroke: "#94a3b8",
+                                                    stroke: "#00ffa3",
                                                     strokeWidth: "2",
                                                     strokeLinecap: "round",
                                                     strokeLinejoin: "round",
@@ -221,7 +222,7 @@ export const GET: APIRoute = async () => {
                                         ],
                                     },
                                 },
-                                { type: "span", props: { style: { color: "#334155", fontSize: "28px" }, children: "·" } },
+                                { type: "span", props: { style: { color: "rgba(255,255,255,0.2)", fontSize: "28px" }, children: "·" } },
                                 // AI
                                 {
                                     type: "div",
@@ -235,7 +236,7 @@ export const GET: APIRoute = async () => {
                                                     height: "32",
                                                     viewBox: "0 0 24 24",
                                                     fill: "none",
-                                                    stroke: "#94a3b8",
+                                                    stroke: "#00ffa3",
                                                     strokeWidth: "2",
                                                     strokeLinecap: "round",
                                                     strokeLinejoin: "round",

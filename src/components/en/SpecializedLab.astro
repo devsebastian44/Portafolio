@@ -1,0 +1,524 @@
+---
+// src/components/en/SpecializedLab.astro
+---
+
+<section id="lab" class="py-24 relative overflow-hidden bg-transparent">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+                    Specialized <span class="text-[#00ffa3]">Lab</span>
+                </h2>
+                <p
+                    class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
+                >
+                    An experimental space where Cybersecurity meets AI and Data
+                    Analysis.
+                </p>
+            </div>
+
+            <div x-data="{ activeTab: 'cyber' }" class="space-y-8">
+                <!-- Tab Navigation -->
+                <div class="flex justify-center gap-4">
+                    <button
+                        @click="activeTab = 'cyber'"
+                        :class="activeTab === 'cyber' ? 'border-[#00ffa3] text-[#00ffa3] bg-[#00ffa3]/10 shadow-[0_0_20px_rgba(0,255,163,0.15)]' : 'border-white/10 text-slate-400 hover:border-white/20 hover:text-white'"
+                        class="px-8 py-3 border rounded-xl font-mono text-xs uppercase tracking-widest transition-all duration-300"
+                    >
+                        Cybersecurity
+                    </button>
+                    <button
+                        @click="activeTab = 'ai'"
+                        :class="activeTab === 'ai' ? 'border-[#00ffa3] text-[#00ffa3] bg-[#00ffa3]/10 shadow-[0_0_20px_rgba(0,255,163,0.15)]' : 'border-white/10 text-slate-400 hover:border-white/20 hover:text-white'"
+                        class="px-8 py-3 border rounded-xl font-mono text-xs uppercase tracking-widest transition-all duration-300"
+                    >
+                        AI & Data Lab
+                    </button>
+                </div>
+
+                <!-- Tab Content: Cybersecurity -->
+                <div
+                    x-show="activeTab === 'cyber'"
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0 translate-y-4"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    class="grid grid-cols-1 lg:grid-cols-12 gap-8"
+                >
+                    <!-- Machine Sidebar -->
+                    <div
+                        class="lg:col-span-4 flex flex-col gap-4"
+                        x-data="{ selectedMachine: 'kioptrix' }"
+                    >
+                        <div class="flex flex-col gap-3">
+                            <button
+                                @click="selectedMachine = 'kioptrix'; $dispatch('start-log-en', 'kioptrix')"
+                                class="p-5 bg-white/5 border border-white/10 rounded-2xl text-left hover:border-[#00ffa3]/30 transition-all group"
+                            >
+                                <span
+                                    class="block text-[10px] font-mono text-slate-500 mb-1 uppercase tracking-widest leading-none"
+                                    >Box: Easy</span
+                                >
+                                <span
+                                    class="text-lg font-bold text-white group-hover:text-[#00ffa3] transition-colors leading-none"
+                                    >Kioptrix Level 1</span
+                                >
+                                <div class="mt-3 flex items-center gap-4">
+                                    <div
+                                        class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                    >
+                                        <div
+                                            class="h-full bg-[#00ffa3] w-full shadow-[0_0_8px_rgba(0,255,163,0.5)]"
+                                        >
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-slate-400 leading-none"
+                                        >PWNED</span
+                                    >
+                                </div>
+                            </button>
+                            <button
+                                @click="selectedMachine = 'blue'; $dispatch('start-log-en', 'blue')"
+                                class="p-5 bg-white/5 border border-white/10 rounded-2xl text-left hover:border-[#00ffa3]/30 transition-all group"
+                            >
+                                <span
+                                    class="block text-[10px] font-mono text-slate-500 mb-1 uppercase tracking-widest leading-none"
+                                    >Box: Medium</span
+                                >
+                                <span
+                                    class="text-lg font-bold text-white group-hover:text-[#00ffa3] transition-colors leading-none"
+                                    >Blue (EternalBlue)</span
+                                >
+                                <div class="mt-3 flex items-center gap-4">
+                                    <div
+                                        class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden"
+                                    >
+                                        <div
+                                            class="h-full bg-[#00ffa3] w-full shadow-[0_0_8px_rgba(0,255,163,0.5)]"
+                                        >
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-[10px] font-mono text-slate-400 leading-none"
+                                        >PWNED</span
+                                    >
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Terminal Writeup -->
+                    <div
+                        class="lg:col-span-8 bg-black/40 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-2xl"
+                        x-data="{ 
+                            lines: [],
+                            currentMachine: 'blue',
+                            logs: {
+                                kioptrix: [
+                                    '> starting scan on 10.10.10.1...',
+                                    '[+] port 80 open: Apache/1.3.20 (Unix)',
+                                    '[+] mod_ssl/2.8.4 - OpenSSL/0.9.6b',
+                                    '> searching for exploit in exploit-db...',
+                                    '[!] exploit found: OpenFuck.c (CVE-2002-0082)',
+                                    '> compiling exploit: gcc -o OpenFuck OpenFuck.c -lssl',
+                                    '> launching payload...',
+                                    '[+] established connection to 10.10.10.1',
+                                    '[+] uid=0(root) gid=0(root)',
+                                    '> FLAG: HTB{root_level_one_pwned}'
+                                ],
+                                blue: [
+                                    '> scanning for eternalblue (MS17-010)...',
+                                    '[!] target vulnerable to smb_ms17_010_eternalblue',
+                                    '> preparing shellcode for windows/x64/meterpreter/reverse_tcp',
+                                    '> launching exploit...',
+                                    '[*] sending exploit packet 1/3...',
+                                    '[*] sending exploit packet 2/3...',
+                                    '[+] exploit sent, wait for session...',
+                                    '[*] meterpreter session 1 opened!',
+                                    '> getuid: NT AUTHORITY\\SYSTEM',
+                                    '> FLAG: HTB{b1ue_ms17_010_pwnd}'
+                                ]
+                            },
+                            async animate(machine) {
+                                this.lines = [];
+                                for (let line of this.logs[machine]) {
+                                    this.lines.push(line);
+                                    await new Promise(r => setTimeout(r, 600));
+                                }
+                            }
+                         }"
+                        @start-log-en.window="animate($event.detail)"
+                    >
+                        <div
+                            class="bg-white/5 px-4 py-2 flex items-center justify-between border-b border-white/10"
+                        >
+                            <div class="flex gap-2">
+                                <div
+                                    class="w-2.5 h-2.5 rounded-full bg-red-400/20 border border-red-400/40"
+                                >
+                                </div>
+                                <div
+                                    class="w-2.5 h-2.5 rounded-full bg-yellow-400/20 border border-yellow-400/40"
+                                >
+                                </div>
+                                <div
+                                    class="w-2.5 h-2.5 rounded-full bg-green-400/20 border border-green-400/40"
+                                >
+                                </div>
+                            </div>
+                            <span
+                                class="text-[10px] font-mono text-slate-500 uppercase tracking-widest leading-none"
+                                >CyberTerminal.sh</span
+                            >
+                            <div class="w-20"></div>
+                        </div>
+                        <div
+                            class="p-6 font-mono text-sm min-h-[300px] flex flex-col gap-2"
+                        >
+                            <template x-for="line in lines">
+                                <div class="flex gap-4">
+                                    <span
+                                        class="text-[#00ffa3]/40"
+                                        x-text="`[$]`"></span>
+                                    <span class="text-slate-300" x-text="line"
+                                    ></span>
+                                </div>
+                            </template>
+                            <div
+                                x-show="lines.length === 0"
+                                class="text-slate-600 animate-pulse"
+                            >
+                                > Select a machine to view the exploitation
+                                process...
+                            </div>
+                            <div
+                                class="w-2 h-4 bg-[#00ffa3]/50 animate-caret ml-10"
+                                x-show="lines.length > 0"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: AI & Data -->
+                <div
+                    x-show="activeTab === 'ai'"
+                    x-transition:enter="transition ease-out duration-300 transform"
+                    x-transition:enter-start="opacity-0 translate-y-4"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    class="grid grid-cols-1 lg:grid-cols-12 gap-8"
+                >
+                    <!-- AI Console -->
+                    <div
+                        class="lg:col-span-12 xl:col-span-7 bg-black/40 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-2xl flex flex-col h-[500px]"
+                    >
+                        <div
+                            class="bg-white/5 px-6 py-4 flex items-center justify-between border-b border-white/10"
+                        >
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-3 h-3 bg-[#00ffa3] rounded-full animate-pulse shadow-[0_0_10px_rgba(0,255,163,0.5)]"
+                                >
+                                </div>
+                                <span
+                                    class="text-xs font-bold text-white tracking-widest uppercase"
+                                    >DeepAudit AI v4.0</span
+                                >
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-500"
+                                >SYSTEM: ONLINE</span
+                            >
+                        </div>
+                        <div
+                            class="flex-1 overflow-y-auto p-6 space-y-6"
+                            id="ai-messages-en"
+                        >
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 flex items-center justify-center flex-shrink-0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="#00ffa3"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        ><path
+                                            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+                                        ></path><path d="M12 6v6l4 2"
+                                        ></path></svg
+                                    >
+                                </div>
+                                <div
+                                    class="p-4 bg-white/5 border border-white/10 rounded-2xl rounded-tl-none"
+                                >
+                                    <p
+                                        class="text-sm text-slate-300 leading-relaxed"
+                                    >
+                                        Welcome to the AI Lab. I am DeepAudit,
+                                        specialized in preventive analysis and
+                                        predictive models. Which technical area
+                                        shall we work on today?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 justify-end">
+                                <div
+                                    class="p-4 bg-[#00ffa3]/10 border border-[#00ffa3]/30 rounded-2xl rounded-tr-none"
+                                >
+                                    <p
+                                        class="text-sm text-[#00ffa3] leading-relaxed"
+                                    >
+                                        Analyze GAN model architecture.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 animate-fadeIn">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 flex items-center justify-center flex-shrink-0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="#00ffa3"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        ><path
+                                            d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+                                        ></path><path d="M12 6v6l4 2"
+                                        ></path></svg
+                                    >
+                                </div>
+                                <div
+                                    class="p-4 bg-white/5 border border-white/10 rounded-2xl rounded-tl-none"
+                                >
+                                    <p
+                                        class="text-sm text-slate-300 leading-relaxed font-mono"
+                                    >
+                                        > Processing network parameters...<br />
+                                        > Gradient stable. Success in convergence.<br
+                                        />
+                                        Convolutional layers show 98.4% optimization
+                                        in edge reconstruction. No anomalies detected
+                                        in latent space.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white/5 border-t border-white/10">
+                            <div class="relative">
+                                <input
+                                    type="text"
+                                    placeholder="Query system..."
+                                    disabled
+                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-slate-400 cursor-not-allowed italic"
+                                />
+                                <div
+                                    class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-mono text-slate-600"
+                                >
+                                    INPUT_LOCKED
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Dashboard -->
+                    <div
+                        class="lg:col-span-12 xl:col-span-5 bg-card border border-white/10 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between h-[500px]"
+                    >
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <div>
+                                    <h5 class="text-lg font-bold text-white">
+                                        Predictive Model
+                                    </h5>
+                                    <p
+                                        class="text-[10px] font-mono text-slate-500 uppercase tracking-widest"
+                                    >
+                                        Accuracy vs Loss
+                                    </p>
+                                </div>
+                                <div class="p-3 bg-[#00ffa3]/10 rounded-xl">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="#00ffa3"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        ><path d="M3 3v18h18"></path><path
+                                            d="m19 9-5 5-4-4-3 3"></path></svg
+                                    >
+                                </div>
+                            </div>
+                            <!-- Canvas for Chart.js -->
+                            <div
+                                class="relative aspect-square max-h-[250px] mx-auto"
+                            >
+                                <canvas id="performanceChartEn"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="bg-white/5 p-4 rounded-xl border border-white/5"
+                                >
+                                    <p
+                                        class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1"
+                                    >
+                                        Precision
+                                    </p>
+                                    <p class="text-2xl font-bold text-white">
+                                        0.998
+                                    </p>
+                                </div>
+                                <div
+                                    class="bg-white/5 p-4 rounded-xl border border-white/5"
+                                >
+                                    <p
+                                        class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1"
+                                    >
+                                        Recall
+                                    </p>
+                                    <p
+                                        class="text-2xl font-bold text-[#00ffa3]"
+                                    >
+                                        0.995
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="text-center p-3 border border-[#00ffa3]/20 bg-[#00ffa3]/5 rounded-xl"
+                            >
+                                <span
+                                    class="text-[10px] font-mono text-[#00ffa3] uppercase tracking-[0.3em]"
+                                    >Status: Production</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-grid-cyber {
+        background-image:
+            linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.05) 1px,
+                transparent 1px
+            );
+        background-size: 40px 40px;
+    }
+
+    @keyframes caretaker {
+        from,
+        to {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+    .animate-caret {
+        animation: caretaker 1s infinite;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fadeIn {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+</style>
+
+<script>
+    import Chart from "chart.js/auto";
+
+    function initChartEn() {
+        const ctx = document.getElementById(
+            "performanceChartEn",
+        ) as HTMLCanvasElement;
+        if (!ctx) return;
+
+        new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: ["E1", "E2", "E3", "E4", "E5", "E6", "E7"],
+                datasets: [
+                    {
+                        label: "Precision",
+                        data: [0.85, 0.91, 0.94, 0.96, 0.98, 0.99, 0.998],
+                        borderColor: "#00ffa3",
+                        backgroundColor: "rgba(0, 255, 163, 0.1)",
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 2,
+                        pointRadius: 0,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { display: false },
+                    },
+                    y: {
+                        grid: { color: "rgba(255,255,255,0.05)" },
+                        min: 0.8,
+                        max: 1,
+                        ticks: { display: false },
+                    },
+                },
+            },
+        });
+    }
+
+    document.addEventListener("astro:page-load", initChartEn);
+    const observer = new IntersectionObserver(
+        (entries) => {
+            if (entries[0].isIntersecting) {
+                initChartEn();
+                observer.disconnect();
+            }
+        },
+        { threshold: 0.1 },
+    );
+
+    const chartEl = document.getElementById("performanceChartEn");
+    if (chartEl) observer.observe(chartEl);
+</script>

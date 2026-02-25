@@ -2,86 +2,95 @@
 
 ---
 
-<section class="relative pt-32 pb-32 overflow-hidden text-center">
-  <!-- Background Pattern -->
-  <div
-    class="absolute inset-0 opacity-10 bg-[url('/bg-pattern.png')] bg-[length:60px] pointer-events-none z-0"
-  >
-  </div>
-
+<section
+  class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden"
+>
   <!-- Hero Glow -->
   <div
-    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-green-500/10 blur-[120px] rounded-full z-0"
+    class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-[#00ffa3]/5 blur-[120px] rounded-full z-0 pointer-events-none"
   >
   </div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <div class="flex flex-col items-center max-w-4xl mx-auto">
-      <div class="text-green-500 font-bold mb-4 font-mono">Hola Mundo! Soy</div>
+    <div
+      class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 max-w-6xl mx-auto"
+    >
+      <!-- Left Column: Content -->
+      <div class="flex-1 text-left space-y-8">
+        <div>
+          <div class="status-online mb-6">
+            <span></span> SYSTEM ONLINE
+          </div>
 
-      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-        Sebastian Zhunaula
-      </h1>
-
-      <p
-        class="text-slate-400 mb-12 max-w-lg mx-auto text-sm md:text-base leading-relaxed"
-      >
-        Desarrollador con experiencia en múltiples áreas tecnológicas,
-        incluyendo desarrollo web, ciberseguridad y ciencia de datos.
-      </p>
-
-      <div class="flex flex-wrap justify-center gap-4 mb-20 animate-fade-in">
-        <a
-          href="https://github.com/devsebastian44"
-          target="_blank"
-          class="px-8 py-3 rounded-lg bg-green-500 text-black font-bold flex items-center gap-2 hover:bg-green-400 transition-all active:scale-95 shadow-[0_0_20px_-5px_rgba(34,197,94,0.5)]"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            width="20"
-            height="20"
-            stroke="currentColor"
-            stroke-width="2.5"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-            ></path></svg
+          <h2 class="text-3xl md:text-4xl text-slate-500 mb-2 font-mono">
+            Hola Mundo! Soy
+          </h2>
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tighter sm:whitespace-nowrap"
           >
-          Github
-        </a>
-        <a
-          href="https://linkedin.com/in/devsebastian44"
-          target="_blank"
-          class="px-8 py-3 rounded-lg border-2 border-green-500/50 text-green-500 font-bold flex items-center gap-2 hover:bg-green-500/10 transition-all active:scale-95"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            width="20"
-            height="20"
-            stroke="currentColor"
-            stroke-width="2.5"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path
-              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"
-            ></path><circle cx="4" cy="4" r="2"></circle></svg
+            Sebastian <span class="text-[#00ffa3] block sm:inline"
+              >Zhunaula</span
+            >
+          </h1>
+        </div>
+
+        <div class="space-y-4">
+          <div
+            class="flex items-center gap-3 text-[#00ffa3] font-mono text-xl md:text-2xl font-bold"
           >
-          Linkedin
-        </a>
+            <span>$</span>
+            <span id="typing-role">Desarrollador Web</span>
+            <span class="cursor-blink"></span>
+          </div>
+
+          <p
+            class="text-slate-400 max-w-xl text-base md:text-lg leading-relaxed"
+          >
+            Desarrollador con experiencia en múltiples áreas tecnológicas,
+            incluyendo desarrollo web, ciberseguridad y ciencia de datos.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a
+            href="https://github.com/devsebastian44"
+            target="_blank"
+            class="btn-terminal-solid"
+          >
+            GITHUB_INICIAR.exe
+          </a>
+          <a
+            href="https://linkedin.com/in/devsebastian44"
+            target="_blank"
+            class="btn-terminal-outline"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              ><path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"
+              ></path><circle cx="4" cy="4" r="2"></circle></svg
+            >
+            <span class="text-sm font-bold tracking-tight text-white/50"
+              >LINKEDIN_SESION.SH</span
+            >
+          </a>
+        </div>
       </div>
 
-      <!-- Hero Graphic Container -->
-      <div class="relative w-full max-w-3xl px-4 mt-2 md:mt-2">
-        <!-- Main Terminal -->
+      <!-- Right Column: Image in Terminal Frame -->
+      <div class="flex-1 w-full max-w-xl relative group">
+        <!-- Terminal Window -->
         <div
-          class="relative bg-[#050505] border border-white/10 rounded-xl overflow-hidden shadow-2xl z-10 group"
+          class="relative bg-black border border-white/10 rounded-lg overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-all duration-500 group-hover:scale-[1.02]"
         >
-          <!-- Terminal Glow -->
+          <!-- Rainbow Border Highlight -->
           <div
-            class="absolute -inset-[1px] bg-gradient-to-r from-green-500/20 via-cyan-500/20 to-purple-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            class="absolute -inset-[1px] bg-gradient-to-tr from-[#00dc82]/20 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity"
           >
           </div>
 
@@ -90,270 +99,106 @@
             class="flex items-center justify-between px-4 py-2 bg-[#0a0a0a] border-b border-white/5 relative z-10"
           >
             <div class="flex gap-1.5">
-              <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
-              <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
-              <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+              <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+              <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+              <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
             </div>
-            <div class="text-[10px] text-slate-400 font-mono">
-              sebastian@dev-workspace
+            <div
+              class="text-[10px] text-slate-500 font-mono tracking-widest uppercase"
+            >
+              profile_pic.png
             </div>
             <div class="w-10"></div>
-            <!-- Spacer for centering -->
           </div>
 
-          <!-- Terminal Content -->
+          <!-- Main Image -->
           <div
-            class="p-6 md:p-10 text-left font-mono text-[10px] md:text-xs leading-relaxed flex flex-col md:flex-row gap-8 md:gap-12 relative z-10 min-h-[300px] bg-[#0c0c0c]"
+            class="aspect-square relative overflow-hidden bg-slate-900 group"
           >
-            <!-- ASCII Art -->
+            <img
+              src="/Img/Foto.jpeg"
+              alt="Sebastian Zhunaula"
+              class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+            />
+            <!-- Scanline Overlay -->
             <div
-              class="text-green-500 whitespace-pre shrink-0 font-bold opacity-90 select-none"
+              class="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]"
             >
-              {
-                `      _____
-     /       \\
-    |  () ()  |
-     \\   ^   /
-      |||||||
-      |||||||`
-              }
-            </div>
-
-            <!-- System Info -->
-            <div id="terminal-info" class="space-y-2">
-              <div class="mb-4">
-                <span class="text-amber-400 font-bold"
-                  >sebastian@dev-workspace</span
-                >
-                <div class="text-slate-500 text-[10px]">------------------</div>
-              </div>
-
-              <div class="grid grid-cols-[80px_1fr] gap-x-2 gap-y-1.5">
-                <div class="text-purple-400 font-bold">Status:</div>
-                <div class="text-white">Disponible</div>
-
-                <div class="text-purple-400 font-bold">Áreas:</div>
-                <div class="text-white">Prog | Ciber | Data | IA</div>
-
-                <div class="text-purple-400 font-bold">Lenguajes:</div>
-                <div class="text-white">Python, JavaScript, SQL</div>
-
-                <div class="text-purple-400 font-bold">Librerías:</div>
-                <div class="text-white">Numpy, Pandas, Matplotlib</div>
-
-                <div class="text-purple-400 font-bold">Frameworks:</div>
-                <div class="text-white">React, Next.js, Astro</div>
-
-                <div class="text-purple-400 font-bold">Shell:</div>
-                <div class="text-white">zsh</div>
-              </div>
             </div>
           </div>
         </div>
 
-        <!-- Overlaid Code Window (Right) -->
+        <!-- Terminal Glow Background -->
         <div
-          class="absolute -right-2 md:-right-8 top-1/2 md:top-auto md:bottom-20 w-[90%] md:w-auto max-w-[320px] bg-[#0F1117] border border-white/10 rounded-lg shadow-2xl z-30 overflow-hidden hidden md:block transform transition-transform hover:scale-105 active:scale-95 duration-300"
+          class="absolute -inset-4 bg-[#00ffa3]/10 blur-3xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
         >
-          <!-- Window Controls (Vertical) -->
-          <div class="absolute left-2 top-3 flex flex-col gap-1.5">
-            <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-            <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-            <div class="w-2 h-2 rounded-full bg-slate-600"></div>
-          </div>
-
-          <!-- Code Content -->
-          <div
-            class="pl-6 p-4 font-mono text-[9px] text-left leading-relaxed text-slate-300 bg-[#0F1117]/95 backdrop-blur-md"
-          >
-            <div class="mb-2">
-              <span class="text-purple-400">import</span> React <span
-                class="text-purple-400">from</span
-              >
-              <span class="text-green-400">'react'</span>;
-            </div>
-
-            <div>
-              <span class="text-purple-400">const</span>
-              <span class="text-yellow-300">DevWorkspace</span> = () => &#123;
-            </div>
-            <div class="pl-2 mb-2">
-              <span class="text-purple-400">const</span> [isLoading, setIsLoading]
-              = React.useState(<span class="text-orange-400">true</span>);
-            </div>
-
-            <div class="pl-2">React.useEffect(() => &#123;</div>
-            <div class="pl-4">
-              <span class="text-purple-400">const</span> timer = setTimeout(() =>
-              &#123;
-            </div>
-            <div class="pl-6">
-              setIsLoading(<span class="text-orange-400">false</span>);
-            </div>
-            <div class="pl-4">
-              &#125;, <span class="text-orange-400">2000</span>);
-            </div>
-            <div class="pl-2">&#125;);</div>
-
-            <div class="pl-2 mt-2">
-              <span class="text-purple-400">return</span> (
-            </div>
-            <div class="pl-4">
-              &lt;<span class="text-blue-400">div</span> className=<span
-                class="text-green-400">"workspace"</span
-              >&gt;
-            </div>
-            <div class="pl-6">&#123;isLoading ? (</div>
-            <div class="pl-8">
-              &lt;<span class="text-yellow-300">LoadingScreen</span> /&gt;
-            </div>
-            <div class="pl-2">);</div>
-            <div>&#125;</div>
-          </div>
-        </div>
-
-        <style>
-          /* Cursor blinking animation */
-          .cursor-blink {
-            display: inline-block;
-            width: 6px;
-            height: 12px;
-            background-color: #22c55e;
-            margin-left: 2px;
-            animation: blink 1s step-end infinite;
-            vertical-align: middle;
-          }
-
-          @keyframes blink {
-            0%,
-            100% {
-              opacity: 1;
-            }
-            50% {
-              opacity: 0;
-            }
-          }
-        </style>
-
-        <script>
-          // @ts-nocheck
-          document.addEventListener("DOMContentLoaded", () => {
-            const terminalInfo = document.getElementById("terminal-info");
-            if (!terminalInfo) return;
-
-            // Lock dimensions to prevent any layout shifting
-            const rect = terminalInfo.getBoundingClientRect();
-            terminalInfo.style.width = `${rect.width}px`;
-            terminalInfo.style.height = `${rect.height}px`;
-            terminalInfo.style.overflow = "hidden";
-
-            // Create cursor element
-            const cursor = document.createElement("span");
-            cursor.className = "cursor-blink";
-
-            /** @type {{node: Text, text: string}[]} */
-            const textNodes = [];
-
-            /** @param {Node} parent */
-            function collectTextNodes(parent) {
-              for (const node of parent.childNodes) {
-                if (node.nodeType === Node.TEXT_NODE) {
-                  if (node.textContent && node.textContent.trim().length > 0) {
-                    textNodes.push({ node: node, text: node.textContent });
-                    node.textContent = ""; // Clear it
-                  }
-                } else if (node.nodeType === Node.ELEMENT_NODE) {
-                  collectTextNodes(node);
-                }
-              }
-            }
-
-            collectTextNodes(terminalInfo);
-
-            // Initially place cursor
-            if (textNodes.length > 0) {
-              textNodes[0].node.parentNode.insertBefore(
-                cursor,
-                textNodes[0].node.nextSibling,
-              );
-            }
-
-            async function startAnimation() {
-              for (const item of textNodes) {
-                item.node.parentNode.insertBefore(
-                  cursor,
-                  item.node.nextSibling,
-                );
-                for (const char of item.text) {
-                  item.node.textContent += char;
-                  const delay = Math.random() * 20 + 5;
-                  await new Promise((r) => setTimeout(r, delay));
-                }
-              }
-            }
-
-            setTimeout(startAnimation, 500);
-          });
-        </script>
-
-        <!-- Computer Base Stand with Rainbow Glow -->
-        <div class="relative w-[90%] md:w-[85%] mx-auto -mt-1 z-0">
-          <div
-            class="h-16 bg-[#030712] rounded-b-[30px] border-b border-white/5 relative flex items-center shadow-2xl"
-          >
-            <!-- Rainbow Glow Border -->
-            <div
-              class="absolute -inset-[3px] top-0 rounded-b-[34px] bg-gradient-to-r from-yellow-400 via-green-500 to-cyan-500 blur-[8px] opacity-60 -z-10"
-            >
-            </div>
-            <!-- Solid outline to sharpen the glow edge -->
-            <div
-              class="absolute -inset-[1px] top-0 rounded-b-[31px] bg-gradient-to-r from-yellow-300 via-green-400 to-cyan-400 -z-10"
-            >
-            </div>
-
-            <!-- Coffee Block -->
-            <div
-              class="ml-8 md:ml-12 flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-lg border border-white/5 backdrop-blur-sm"
-            >
-              <div class="relative">
-                <!-- Steam -->
-                <div
-                  class="absolute -top-3 left-1 w-0.5 h-2 bg-slate-500/50 rounded-full animate-pulse"
-                >
-                </div>
-                <div
-                  class="absolute -top-4 left-2.5 w-0.5 h-2 bg-slate-500/50 rounded-full animate-pulse delay-75"
-                >
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="text-orange-400"
-                  ><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path
-                    d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line
-                    x1="6"
-                    x2="6"
-                    y1="2"
-                    y2="4"></line><line x1="10" x2="10" y1="2" y2="4"
-                  ></line><line x1="14" x2="14" y1="2" y2="4"></line></svg
-                >
-              </div>
-              <span
-                class="text-[9px] font-bold text-slate-400 tracking-widest uppercase"
-                >COFFEE</span
-              >
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <style>
+    .cursor-blink {
+      display: inline-block;
+      width: 10px;
+      height: 24px;
+      background-color: #00ffa3;
+      margin-left: 4px;
+      animation: blink 1s step-end infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <script>
+    const roles = [
+      "Desarrollador Web",
+      "Especialista en Ciberseguridad",
+      "Científico de Datos",
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById("typing-role");
+
+    function type() {
+      if (!typingElement) return;
+
+      const currentRole = roles[roleIndex];
+
+      if (isDeleting) {
+        typingElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 50 : 100;
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        typeSpeed = 2000; // Wait at end
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typingElement) type();
+    });
+  </script>
 </section>

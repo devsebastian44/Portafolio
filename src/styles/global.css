@@ -2,10 +2,10 @@
 
 @layer base {
   :root {
-    --bg-dark: #020617;
-    --acc-primary: #22c55e;
-    /* Green accent from image */
-    --acc-secondary: #4ade80;
+    --bg-dark: #000000;
+    --acc-primary: #00ffa3;
+    /* Clean vibrant neon green */
+    --acc-secondary: #00ffa3;
     --acc-accent: #f472b6;
   }
 
@@ -47,6 +47,96 @@
   .bg-glass {
     @apply bg-white/5 backdrop-blur-md;
   }
+
+  .bg-card {
+    @apply bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[2rem] transition-all duration-500 overflow-hidden relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .bg-card:hover {
+    @apply border-white/20 bg-white/[0.04];
+    box-shadow: 0 0 30px rgba(0, 220, 130, 0.05);
+  }
+
+  .bg-card::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00ffa3]/50 to-transparent opacity-0 transition-opacity duration-500;
+  }
+
+  .bg-card:hover::after {
+    @apply opacity-100;
+  }
+
+  .tag-glass {
+    @apply px-3 py-1.5 bg-black/40 border border-white/10 rounded-lg text-[11px] font-mono text-slate-400 hover:text-white hover:border-white/20 transition-all duration-300;
+  }
+
+  .badge-featured {
+    @apply flex items-center gap-1.5 px-3 py-1.5 bg-[#00ffa3]/10 border border-[#00ffa3]/30 rounded-full text-[10px] font-bold text-[#00ffa3] uppercase tracking-wider;
+    box-shadow: 0 0 15px rgba(0, 255, 163, 0.1);
+  }
+
+  .status-dot {
+    @apply flex items-center gap-2 text-[11px] font-mono text-slate-500;
+  }
+
+  .status-dot span {
+    @apply w-2 h-2 rounded-full bg-amber-500;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+  }
+
+  /* Cyberpunk Terminal Styles */
+  .btn-terminal-solid {
+    @apply px-6 py-3 bg-[#00ffa3] text-black font-mono font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center gap-2;
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  .btn-terminal-solid:hover {
+    @apply bg-white;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--acc-primary);
+  }
+
+  .btn-terminal-outline {
+    @apply px-6 py-3 bg-transparent border border-[#00ffa3] text-[#00ffa3] font-mono font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center gap-2;
+  }
+
+  .btn-terminal-outline:hover {
+    @apply bg-[#00ffa3]/10;
+    box-shadow: 0 0 15px rgba(0, 255, 163, 0.2);
+  }
+
+  .status-online {
+    @apply inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/30 rounded-full text-[10px] font-bold text-green-500 uppercase tracking-tighter;
+  }
+
+  .status-online span {
+    @apply w-2 h-2 rounded-full bg-[#00ffa3] animate-pulse;
+    box-shadow: 0 0 8px #00ffa3;
+  }
+
+  .animate-ticker {
+    animation: ticker 40s linear infinite;
+    display: flex;
+    width: max-content;
+  }
+
+  .bg-grid-cyber {
+    background-image:
+      linear-gradient(to right, rgba(0, 255, 163, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 255, 163, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
 }
 
 /* Custom Scrollbar */
@@ -60,23 +150,6 @@
 
 ::-webkit-scrollbar-thumb {
   @apply bg-slate-700 rounded-full hover:bg-slate-600 transition-colors;
-}
-
-@layer utilities {
-  .animate-ticker {
-    animation: ticker 40s linear infinite;
-    display: flex;
-    width: max-content;
-  }
-
-  @keyframes ticker {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-50%, 0, 0);
-    }
-  }
 }
 
 html {

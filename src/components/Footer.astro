@@ -9,12 +9,18 @@ const socialLinks = [
 ---
 
 <footer
-    class="pt-24 pb-8 relative overflow-hidden bg-[#020617] border-t border-slate-700"
+    class="pt-16 pb-10 relative overflow-hidden border-t border-white/10 bg-white/[0.02] backdrop-blur-xl"
 >
+    <!-- Technical Background Glow -->
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#00ffa3]/5 blur-[120px] rounded-full pointer-events-none z-0"
+    >
+    </div>
+
     <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-7xl mx-auto">
             <div
-                class="flex flex-col md:flex-row justify-center gap-12 md:gap-20 mb-20"
+                class="flex flex-col md:flex-row justify-center gap-12 md:gap-20 mb-12"
             >
                 <!-- Left Side: Brand & Bio -->
                 <div class="max-w-md space-y-8">
@@ -26,7 +32,7 @@ const socialLinks = [
                             <img
                                 src="/Img/favicon.png"
                                 alt="DevSebastian Logo"
-                                class="w-8 h-8 object-contain drop-shadow-[0_0_12px_rgba(34,197,94,0.6)]"
+                                class="w-8 h-8 object-contain drop-shadow-[0_0_12px_rgba(0, 255, 163, 0.6)]"
                             />
                             DevSebastian
                         </a>
@@ -43,7 +49,7 @@ const socialLinks = [
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    class="text-slate-500 hover:text-green-500 transition-colors"
+                                    class="text-slate-500 hover:text-[#00ffa3] transition-colors"
                                 >
                                     <span class="sr-only">{social.name}</span>
                                     <svg
@@ -106,7 +112,7 @@ const socialLinks = [
                         <li>
                             <a
                                 href="#about"
-                                class="text-slate-400 hover:text-green-500 text-sm transition-colors flex items-center gap-2 group/nav"
+                                class="text-slate-400 hover:text-[#00ffa3] text-sm transition-colors flex items-center gap-2 group/nav"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +124,7 @@ const socialLinks = [
                                     stroke-width="2"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    class="text-green-500/50 group-hover/nav:text-green-500 transition-colors"
+                                    class="text-[#00ffa3]/50 group-hover/nav:text-[#00ffa3] transition-colors"
                                     ><path
                                         d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
                                     ></path><circle cx="12" cy="7" r="4"
@@ -130,7 +136,7 @@ const socialLinks = [
                         <li>
                             <a
                                 href="#projects"
-                                class="text-slate-400 hover:text-green-500 text-sm transition-colors flex items-center gap-2 group/nav"
+                                class="text-slate-400 hover:text-[#00ffa3] text-sm transition-colors flex items-center gap-2 group/nav"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +148,7 @@ const socialLinks = [
                                     stroke-width="2"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    class="text-green-500/50 group-hover/nav:text-green-500 transition-colors"
+                                    class="text-[#00ffa3]/50 group-hover/nav:text-[#00ffa3] transition-colors"
                                     ><rect
                                         width="20"
                                         height="14"
@@ -159,7 +165,7 @@ const socialLinks = [
                         <li>
                             <a
                                 href="#contact"
-                                class="text-slate-400 hover:text-green-500 text-sm transition-colors flex items-center gap-2 group/nav"
+                                class="text-slate-400 hover:text-[#00ffa3] text-sm transition-colors flex items-center gap-2 group/nav"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +177,7 @@ const socialLinks = [
                                     stroke-width="2"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    class="text-green-500/50 group-hover/nav:text-green-500 transition-colors"
+                                    class="text-[#00ffa3]/50 group-hover/nav:text-[#00ffa3] transition-colors"
                                     ><rect
                                         width="20"
                                         height="16"
@@ -190,7 +196,7 @@ const socialLinks = [
 
             <!-- Bottom Bar -->
             <div
-                class="pt-8 border-t border-white/5 flex flex-col justify-center items-center text-center gap-2"
+                class="pt-6 border-t border-white/5 flex flex-col justify-center items-center text-center gap-2"
             >
                 <div class="text-slate-500 text-xs font-medium leading-relaxed">
                     Copyright © 2025 Sebastian Zhunaula. All rights reserved.
