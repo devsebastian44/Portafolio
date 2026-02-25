@@ -15,9 +15,8 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 ├── src/
 │   ├── components/         # UI Components (Multi-language support)
 │   │   ├── en/             # English Translated Components
-│   │   │   ├── About.astro
-│   │   │   └── ...
-│   │   ├── About.astro     # Spanish Components (Default)
+│   │   ├── About.astro     # High-fidelity Terminal redesign
+│   │   ├── CustomCursor.astro # Neon trailing cursor
 │   │   └── ...
 │   ├── fonts/              # Local Fonts (Aldrich & Roboto Condensed)
 │   │   ├── Aldrich-Regular.ttf
@@ -38,7 +37,7 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 
 *   **Framework**: [Astro 5](https://astro.build/) (Static Site Generation)
 *   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Interactivity**: [Alpine.js](https://alpinejs.dev/) (Mobile Menu & AJAX)
+*   **Interactivity**: [Alpine.js](https://alpinejs.dev/) & [Vanilla JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (Custom Cursor)
 *   **Typography**: Aldrich & Roboto Condensed (Modern high-tech pairing)
 *   **Backend**: [Formspree](https://formspree.io/) (Functional Contact Form)
 *   **OG Generation**: [Satori](https://github.com/vercel/satori) & [Resvg](https://github.com/yisibl/resvg-js) (Dynamic Social Images)
@@ -56,7 +55,10 @@ All commands are run from the root of the project:
 
 ## ✨ Features
 
-- **Multi-language**: Seamless switching between Spanish and English.
+- **High-Fidelity Terminal**: Redesigned About section with window controls, pixel-art logo, and crosshair lines.
+- **Strategic Localized Glows**: Section-bound background glows (Hero, About, Project, Lab, CTA, Contact, Footer) for extra depth.
+- **Cyber-Neon Cursor**: Custom trailing cursor with neon green aesthetics (`#00ffa3`).
+- **Multi-language**: Seamless switching between Spanish and English with full visual parity.
 - **3D Skill Sphere**: Interactive high-performance canvas component displaying tech stacks.
 - **Functional Contact Form**: Integrated with Formspree and handled via AJAX for a smooth user experience.
 - **Dynamic OG Images**: Programmatically generated preview images (`/og.png`) using Satori.
