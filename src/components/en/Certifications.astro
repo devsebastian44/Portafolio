@@ -101,15 +101,20 @@ const certifications = [
             ))}
         </div>
 
-        <div class="mt-16 text-center">
-            <a
-                href="https://www.credly.com/users/sebastian-zhunaula/badges"
-                target="_blank"
+        <!-- More Certifications Button -->
+        <div class="mt-20 flex justify-center relative z-10">
+            <a 
+                href="https://www.credly.com/users/sebastian-zhunaula/badges" 
+                target="_blank" 
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-8 py-4 bg-white/5 text-white border border-white/10 rounded-xl hover:bg-[#00ffa3]/10 hover:text-[#00ffa3] hover:border-[#00ffa3]/30 hover:shadow-[0_0_20px_rgba(0,255,163,0.1)] transition-all duration-300 font-mono text-sm group"
+                class="group/credly flex items-center gap-3 px-10 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-white hover:border-[#00ffa3]/50 hover:shadow-[0_0_30px_rgba(0,255,163,0.15)] transition-all duration-300 transform hover:-translate-y-1"
             >
-                <span>See more certifications</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                <span class="text-slate-300 group-hover/credly:text-white transition-colors uppercase text-xs font-bold tracking-widest">See more on Credly</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#00ffa3] group-hover/credly:scale-110 transition-transform">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
             </a>
         </div>
     </div>
