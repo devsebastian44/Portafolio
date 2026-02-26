@@ -11,7 +11,7 @@ const iconMap: Record<string, string> = {
     React: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     Angular:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
-    Astro: "https://skillicons.dev/icons?i=astro",
+    Astro: "https://api.iconify.design/vscode-icons/file-type-astro.svg",
     Bootstrap:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
     TailwindCSS:
@@ -21,7 +21,7 @@ const iconMap: Record<string, string> = {
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
     Laravel:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-    PHP: "https://cdn.simpleicons.org/php/777BB4",
+    PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
     Python: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
     PostgreSQL:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
@@ -29,16 +29,15 @@ const iconMap: Record<string, string> = {
     MongoDB:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
     Pandas: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
-    Matplotlib:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg",
-    Seaborn: "https://seaborn.pydata.org/_images/logo-mark-lightbg.svg",
+    Matplotlib: "https://api.iconify.design/devicon/matplotlib.svg",
+    Seaborn: "https://api.iconify.design/devicon/seaborn.svg",
     "Google Colab":
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg",
     Git: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     Docker: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
     Jenkins:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
-    Bash: "https://skillicons.dev/icons?i=bash",
+    Bash: "https://api.iconify.design/logos/bash-icon.svg",
     Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
     Kotlin: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg",
     "C Sharp":
@@ -51,17 +50,25 @@ const iconMap: Record<string, string> = {
     Supabase:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
     Postman: "https://cdn.simpleicons.org/postman/FF6C37",
-    AWS: "https://skillicons.dev/icons?i=aws",
+    AWS: "https://api.iconify.design/logos/aws.svg",
     GitLab: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
     Linux: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
-    Vercel: "https://skillicons.dev/icons?i=vercel",
+    Vercel: "https://api.iconify.design/logos/vercel-icon.svg",
     Obsidian: "https://cdn.simpleicons.org/obsidian/483699",
-    "Next.js": "https://skillicons.dev/icons?i=nextjs",
-    Prisma: "https://skillicons.dev/icons?i=prisma",
+    "Next.js": "https://api.iconify.design/logos/nextjs-icon.svg",
+    Prisma: "https://api.iconify.design/logos/prisma.svg",
+    NumPy: "https://api.iconify.design/logos/numpy.svg",
+    OWASP: "https://cdn.simpleicons.org/owasp",
+    "Kali Linux": "https://cdn.simpleicons.org/kalilinux",
+    Nessus: "https://api.iconify.design/mdi/shield-search.svg?color=white",
+    OpenVAS:
+        "https://api.iconify.design/game-icons/radar-sweep.svg?color=white",
+    REMnux: "https://api.iconify.design/mdi/virus-outline.svg?color=white",
 };
 
 const sphereIconMap: Record<string, string> = {
     HTML5: "https://cdn.simpleicons.org/html5/FFFFFF",
+    CSS3: "https://api.iconify.design/devicon-plain/css3.svg?color=white",
     JavaScript: "https://cdn.simpleicons.org/javascript/FFFFFF",
     TypeScript: "https://cdn.simpleicons.org/typescript/FFFFFF",
     React: "https://cdn.simpleicons.org/react/FFFFFF",
@@ -78,6 +85,9 @@ const sphereIconMap: Record<string, string> = {
     MySQL: "https://cdn.simpleicons.org/mysql/FFFFFF",
     MongoDB: "https://cdn.simpleicons.org/mongodb/FFFFFF",
     Pandas: "https://cdn.simpleicons.org/pandas/FFFFFF",
+    Matplotlib:
+        "https://api.iconify.design/devicon-plain/matplotlib.svg?color=white",
+    Seaborn: "https://api.iconify.design/devicon-plain/seaborn.svg?color=white",
     "Google Colab": "https://cdn.simpleicons.org/googlecolab/FFFFFF",
     Git: "https://cdn.simpleicons.org/git/FFFFFF",
     Docker: "https://cdn.simpleicons.org/docker/FFFFFF",
@@ -85,6 +95,8 @@ const sphereIconMap: Record<string, string> = {
     Bash: "https://cdn.simpleicons.org/gnubash/FFFFFF",
     Figma: "https://cdn.simpleicons.org/figma/FFFFFF",
     Kotlin: "https://cdn.simpleicons.org/kotlin/FFFFFF",
+    "C Sharp":
+        "https://api.iconify.design/devicon-plain/csharp.svg?color=white",
     Go: "https://cdn.simpleicons.org/go/FFFFFF",
     Elixir: "https://cdn.simpleicons.org/elixir/FFFFFF",
     Redis: "https://cdn.simpleicons.org/redis/FFFFFF",
@@ -93,11 +105,19 @@ const sphereIconMap: Record<string, string> = {
     Postman: "https://cdn.simpleicons.org/postman/FFFFFF",
     GitHub: "https://cdn.simpleicons.org/github/FFFFFF",
     GitLab: "https://cdn.simpleicons.org/gitlab/FFFFFF",
+    AWS: "https://api.iconify.design/mdi/aws.svg?color=white",
     Linux: "https://cdn.simpleicons.org/linux/FFFFFF",
     Vercel: "https://cdn.simpleicons.org/vercel/FFFFFF",
     Obsidian: "https://cdn.simpleicons.org/obsidian/FFFFFF",
     "Next.js": "https://cdn.simpleicons.org/nextdotjs/FFFFFF",
     Prisma: "https://cdn.simpleicons.org/prisma/FFFFFF",
+    NumPy: "https://cdn.simpleicons.org/numpy/FFFFFF",
+    OWASP: "https://cdn.simpleicons.org/owasp/FFFFFF",
+    "Kali Linux": "https://cdn.simpleicons.org/kalilinux/FFFFFF",
+    Nessus: "https://api.iconify.design/mdi/shield-search.svg?color=white",
+    OpenVAS:
+        "https://api.iconify.design/game-icons/radar-sweep.svg?color=white",
+    REMnux: "https://api.iconify.design/mdi/virus-outline.svg?color=white",
 };
 
 const skillCategories = [
@@ -105,17 +125,12 @@ const skillCategories = [
         title: "Frontend Development",
         icon: "layout",
         skills: [
-            "HTML5",
-            "CSS3",
-            "JavaScript",
             "TypeScript",
             "React",
+            "Next.js",
             "Angular",
             "Astro",
-            "Bootstrap",
             "TailwindCSS",
-            "jQuery",
-            "Next.js",
         ],
     },
     {
@@ -123,13 +138,13 @@ const skillCategories = [
         icon: "server",
         skills: [
             "Node.js",
-            "Laravel",
-            "PHP",
             "Python",
-            "Go",
-            "Elixir",
-            "Kotlin",
             "C Sharp",
+            "PHP",
+            "Laravel",
+            "Go",
+            "Kotlin",
+            "Elixir",
         ],
     },
     {
@@ -139,26 +154,26 @@ const skillCategories = [
             "PostgreSQL",
             "MySQL",
             "MongoDB",
-            "Prisma",
             "Redis",
-            "Firebase",
             "Supabase",
+            "Firebase",
+            "Prisma",
         ],
     },
     {
         title: "Cloud & DevOps",
         icon: "cloud",
-        skills: ["Docker", "Jenkins", "AWS", "GitLab", "Vercel", "Linux"],
+        skills: ["AWS", "Docker", "Jenkins", "Git", "GitLab", "Vercel"],
     },
     {
         title: "Data Science",
         icon: "bar-chart-2",
-        skills: ["Pandas", "Matplotlib", "Seaborn", "Google Colab"],
+        skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
     },
     {
-        title: "Tools & Design",
-        icon: "pen-tool",
-        skills: ["Git", "Bash", "Postman", "Figma", "Obsidian"],
+        title: "Cybersecurity",
+        icon: "shield",
+        skills: ["Kali Linux", "REMnux", "OWASP", "Nessus", "OpenVAS"],
     },
 ];
 ---
@@ -183,34 +198,40 @@ const skillCategories = [
                             {[
                                 "Python",
                                 "PHP",
-                                "JavaScript",
                                 "TypeScript",
                                 "Kotlin",
                                 "C Sharp",
-                                "HTML5",
-                                "CSS3",
                                 "React",
                                 "Angular",
                                 "Astro",
-                                "Bootstrap",
                                 "TailwindCSS",
-                                "jQuery",
-                                "Pandas",
+                                "Next.js",
                                 "Node.js",
                                 "Laravel",
+                                "Go",
+                                "Elixir",
                                 "PostgreSQL",
                                 "MySQL",
                                 "MongoDB",
-                                "Docker",
-                                "Git",
-                                "Jenkins",
-                                "Bash",
-                                "Figma",
+                                "Redis",
+                                "Supabase",
+                                "Firebase",
+                                "Prisma",
                                 "AWS",
+                                "Docker",
+                                "Jenkins",
+                                "Git",
                                 "GitLab",
-                                "Linux",
                                 "Vercel",
-                                "Next.js",
+                                "Pandas",
+                                "NumPy",
+                                "Matplotlib",
+                                "Seaborn",
+                                "Kali Linux",
+                                "REMnux",
+                                "OWASP",
+                                "Nessus",
+                                "OpenVAS",
                             ].map((techName) => (
                                 <div class="flex items-center gap-4 px-8 transition-all duration-300 hover:scale-110 cursor-default opacity-80 hover:opacity-100">
                                     {iconMap[techName] && (
@@ -965,13 +986,23 @@ const skillCategories = [
                                         <div class="flex flex-wrap gap-2">
                                             {category.skills.map((skill) => (
                                                 <span class="tag-glass flex items-center gap-2 group/chip">
-                                                    {iconMap[skill] && (
+                                                    {sphereIconMap[skill] ? (
                                                         <img
-                                                            src={iconMap[skill]}
+                                                            src={
+                                                                sphereIconMap[
+                                                                    skill
+                                                                ]
+                                                            }
                                                             alt={skill}
                                                             class="w-3.5 h-3.5 group-hover/chip:scale-110 transition-all opacity-70 group-hover:opacity-100"
                                                         />
-                                                    )}
+                                                    ) : iconMap[skill] ? (
+                                                        <img
+                                                            src={iconMap[skill]}
+                                                            alt={skill}
+                                                            class="w-3.5 h-3.5 group-hover/chip:scale-110 transition-all opacity-70 group-hover:opacity-100 grayscale brightness-[300%]"
+                                                        />
+                                                    ) : null}
                                                     {skill}
                                                 </span>
                                             ))}
@@ -988,43 +1019,42 @@ const skillCategories = [
                     <div class="max-w-[450px] w-full">
                         <SkillSphere
                             items={[
-                                "HTML5",
-                                "JavaScript",
                                 "TypeScript",
                                 "React",
                                 "Angular",
                                 "Astro",
-                                "Bootstrap",
                                 "TailwindCSS",
-                                "jQuery",
+                                "Next.js",
                                 "Node.js",
                                 "Laravel",
                                 "PHP",
                                 "Python",
+                                "C Sharp",
                                 "PostgreSQL",
                                 "MySQL",
                                 "MongoDB",
-                                "Git",
-                                "Docker",
-                                "Jenkins",
-                                "Bash",
-                                "Figma",
-                                "Kotlin",
-                                "Pandas",
-                                "Google Colab",
-                                "Go",
-                                "Elixir",
                                 "Redis",
                                 "Supabase",
                                 "Firebase",
-                                "Postman",
-                                "GitHub",
-                                "GitLab",
-                                "Linux",
-                                "Vercel",
-                                "Obsidian",
-                                "Next.js",
                                 "Prisma",
+                                "Git",
+                                "Docker",
+                                "Jenkins",
+                                "AWS",
+                                "GitLab",
+                                "Vercel",
+                                "Kotlin",
+                                "Pandas",
+                                "NumPy",
+                                "Matplotlib",
+                                "Seaborn",
+                                "Go",
+                                "Elixir",
+                                "Kali Linux",
+                                "REMnux",
+                                "OWASP",
+                                "Nessus",
+                                "OpenVAS",
                             ].map((name) => ({
                                 name,
                                 icon: sphereIconMap[name] || "",
