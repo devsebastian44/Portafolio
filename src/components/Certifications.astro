@@ -48,7 +48,7 @@ const certifications = [
 <section id="certifications" class="py-24 relative bg-transparent">
     <!-- Certifications Background Glow -->
     <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#00ffa3]/5 blur-[100px] rounded-full pointer-events-none z-0"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[300px] md:h-[500px] bg-[#00ffa3]/5 blur-[70px] md:blur-[100px] rounded-full pointer-events-none z-0"
     >
     </div>
     <div class="container mx-auto px-6 relative z-10">
@@ -61,9 +61,9 @@ const certifications = [
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {certifications.map((cert) => (
-                <div class="group relative bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-8 flex flex-col gap-6 transition-all duration-300 hover:border-[#00ffa3]/30 hover:bg-white/[0.04] hover:shadow-[0_0_30px_rgba(0,255,163,0.05)] overflow-hidden">
+                <div class="w-full group relative bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col gap-6 transition-all duration-300 hover:border-[#00ffa3]/30 hover:bg-white/[0.04] hover:shadow-[0_0_30px_rgba(0,255,163,0.05)] overflow-hidden">
                     
                     <!-- Decorative corner element -->
                     <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
