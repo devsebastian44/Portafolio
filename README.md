@@ -12,6 +12,7 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 │   ├── components/         # UI Components (Multi-language support)
 │   │   ├── en/             # English Translated Components
 │   │   ├── About.astro     # High-fidelity Terminal redesign
+│   │   ├── Certifications.astro # Credly Certifications Section
 │   │   ├── CustomCursor.astro # Neon trailing cursor
 │   │   └── ...
 │   ├── fonts/              # Local Fonts (Aldrich & Roboto Condensed)
@@ -52,7 +53,8 @@ All commands are run from the root of the project:
 ## ✨ Features
 
 - **High-Fidelity Terminal**: Redesigned About section with window controls, pixel-art logo, and crosshair lines.
-- **Strategic Localized Glows**: Section-bound background glows (Hero, About, Project, Lab, CTA, Contact, Footer) for extra depth.
+- **Strategic Localized Glows**: Section-bound background glows (Hero, About, Project, Certifications, CTA, Contact, Footer) for extra depth.
+- **Dynamic Certifications**: Integration of real digital badges/certifications directly mapped from Credly.
 - **Cyber-Neon Cursor**: Custom trailing cursor with neon green aesthetics (`#00ffa3`).
 - **Multi-language**: Seamless switching between Spanish and English with full visual parity.
 - **3D Skill Sphere**: Interactive high-performance canvas component displaying tech stacks.
