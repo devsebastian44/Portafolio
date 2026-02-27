@@ -58,6 +58,7 @@ const iconMap: Record<string, string> = {
     "Next.js": "https://api.iconify.design/logos/nextjs-icon.svg",
     Prisma: "https://api.iconify.design/logos/prisma.svg",
     NumPy: "https://api.iconify.design/logos/numpy.svg",
+    Plotly: "https://cdn.simpleicons.org/plotly",
     OWASP: "https://cdn.simpleicons.org/owasp",
     "Kali Linux": "https://cdn.simpleicons.org/kalilinux",
     Nessus: "https://api.iconify.design/mdi/shield-search.svg?color=white",
@@ -112,6 +113,7 @@ const sphereIconMap: Record<string, string> = {
     "Next.js": "https://cdn.simpleicons.org/nextdotjs/FFFFFF",
     Prisma: "https://cdn.simpleicons.org/prisma/FFFFFF",
     NumPy: "https://cdn.simpleicons.org/numpy/FFFFFF",
+    Plotly: "https://cdn.simpleicons.org/plotly/FFFFFF",
     OWASP: "https://cdn.simpleicons.org/owasp/FFFFFF",
     "Kali Linux": "https://cdn.simpleicons.org/kalilinux/FFFFFF",
     Nessus: "https://api.iconify.design/mdi/shield-search.svg?color=white",
@@ -168,7 +170,7 @@ const skillCategories = [
     {
         title: "Data Science",
         icon: "bar-chart-2",
-        skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
+        skills: ["Pandas", "NumPy", "Plotly", "Matplotlib", "Seaborn"],
     },
     {
         title: "Cybersecurity",
@@ -179,11 +181,6 @@ const skillCategories = [
 ---
 
 <section id="about" class="py-24 relative bg-transparent">
-    <!-- About Background Glow -->
-    <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[400px] bg-[#00ffa3]/5 blur-[60px] md:blur-[90px] rounded-full pointer-events-none z-0"
-    >
-    </div>
     <div class="relative z-10">
         <!-- Tech Ticker -->
         <div
@@ -225,6 +222,7 @@ const skillCategories = [
                                 "Vercel",
                                 "Pandas",
                                 "NumPy",
+                                "Plotly",
                                 "Matplotlib",
                                 "Seaborn",
                                 "Kali Linux",
@@ -760,7 +758,12 @@ const skillCategories = [
                 </div>
 
                 <!-- Full Width: Specialized Skills -->
-                <div class="lg:col-span-2 mt-8">
+                <div class="lg:col-span-2 mt-8 relative">
+                    <!-- Centered Grid Background Glow -->
+                    <div
+                        class="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] max-w-[1000px] max-h-[600px] bg-[#00ffa3]/5 blur-[80px] md:blur-[120px] rounded-[100%] pointer-events-none z-0"
+                    >
+                    </div>
                     <div
                         class="flex items-center gap-3 mb-8 relative z-10 px-2"
                     >
@@ -1046,6 +1049,7 @@ const skillCategories = [
                                 "Kotlin",
                                 "Pandas",
                                 "NumPy",
+                                "Plotly",
                                 "Matplotlib",
                                 "Seaborn",
                                 "Go",
