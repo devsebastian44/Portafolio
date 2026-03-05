@@ -1,8 +1,8 @@
 ---
 const projects = [
+    // Row 1: Web Development
     {
         title: "Modern Esthete",
-        year: "2024",
         status: "shipped",
         description: "Modern e-commerce interface focusing on clean design and user experience.",
         tags: ["TypeScript", "Next.js", "Tailwind CSS", "React","PostgreSQL"],
@@ -11,7 +11,6 @@ const projects = [
     },
     {
         title: "CollabData",
-        year: "2023",
         status: "shipped",
         description: "Collaborative platform for data analysis and information visualization.",
         tags: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
@@ -20,37 +19,57 @@ const projects = [
     },
     {
         title: "DevBlog",
-        year: "2024",
         status: "shipped",
         description: "Blog focusing on programming, cybersecurity, and data science and AI",
         tags: ["Astro", "TypeScript", "Tailwind CSS", "React","PostgreSQL"],
         github: "https://github.com/Devsebastian44/DevBlog",
         demo: "https://devblog44.vercel.app/"
     },
+    // Row 2: Data Science
     {
         title: "Alura Store",
-        year: "2023",
         status: "shipped",
         description: "Analysis of sales, performance, and customer satisfaction for Alura Store branches.",
         tags: ["Python", "Pandas", "Matplotlib", "Seaborn"],
         github: "https://github.com/Devsebastian44/Alura-Store",
-        demo: "https://colab.research.google.com/github/Devsebastian44/Challenge-Data-Science/blob/master/Challenge_Alura_Latam.ipynb"
+        demo: "https://github.com/devsebastian44/Challenge-Data-Science/blob/main/Challenge_Alura_Latam.ipynb"
+    },
+    {
+        title: "Challenge Telecom X",
+        status: "shipped",
+        description: "Customer Churn Analysis for a telecommunications company, optimizing retention through data science.",
+        tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+        github: "https://github.com/devsebastian44/Challenge-Telecom-X",
+        demo: "https://github.com/devsebastian44/Challenge-Telecom-X/blob/main/TelecomX_LATAM.ipynb"
+    },
+    {
+        title: "Web Scraping",
+        status: "shipped",
+        description: "Script for efficient data extraction, link auditing, and structured web asset analysis.",
+        tags: ["Python", "BeautifulSoup", "Requests", "CI/CD"],
+        github: "https://github.com/devsebastian44/Web-Scraping"
+    },
+    // Row 3: Cybersecurity
+    {
+        title: "Keylogger",
+        status: "shipped",
+        description: "Educational keylogger framework and research tool with integrated DevSecOps pipeline.",
+        tags: ["Python", "DevSecOps", "SAST", "Pytest"],
+        github: "https://github.com/devsebastian44/Keylogger"
+    },
+    {
+        title: "Reverse Shell",
+        status: "shipped",
+        description: "Remote access and persistence strategy for Windows 10 under DevSecOps standards.",
+        tags: ["Python", "PowerShell", "DevSecOps", "Windows 10"],
+        github: "https://github.com/devsebastian44/Reverse-Shell"
     },
     {
         title: "Sandboxed",
-        year: "2024",
         status: "shipped",
         description: "Tool menu for malware and computer virus analysis in controlled environments.",
         tags: ["Bash", "Python", "Kali Linux", "REMnux"],
         github: "https://github.com/devsebastian44/Sandboxed"
-    },
-    {
-        title: "Nextcloud Auto Setup",
-        year: "2022",
-        status: "shipped",
-        description: "Script to automate the installation and configuration of a private cloud with Nextcloud.",
-        tags: ["Bash", "Apache", "Ubuntu Server", "MySQL"],
-        github: "https://github.com/Devsebastian44/Nextcloud-Auto-Setup"
     }
 ];
 
@@ -71,7 +90,16 @@ const techIcons: Record<string, string> = {
     "PostgreSQL": "simple-icons:postgresql",
     "MySQL": "simple-icons:mysql",
     "Binance API": "simple-icons:binance",
-    "Firebase": "simple-icons:firebase"
+    "Firebase": "simple-icons:firebase",
+    "NumPy": "simple-icons:numpy",
+    "BeautifulSoup": "simple-icons:simpleanalytics",
+    "Requests": "simple-icons:python",
+    "CI/CD": "simple-icons:gitlab",
+    "DevSecOps": "lucide:shield-check",
+    "PowerShell": "simple-icons:powershell",
+    "SAST": "lucide:scan-search",
+    "Pytest": "simple-icons:pytest",
+    "Windows 10": "simple-icons:windows"
 };
 ---
 
