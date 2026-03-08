@@ -65,6 +65,12 @@ const iconMap: Record<string, string> = {
     OpenVAS:
         "https://api.iconify.design/game-icons/radar-sweep.svg?color=white",
     REMnux: "https://api.iconify.design/mdi/virus-outline.svg?color=white",
+    Statsmodels:
+        "https://api.iconify.design/mdi/chart-bell-curve-cumulative.svg?color=white",
+    SciPy: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scipy/scipy-original.svg",
+    "Scikit-learn":
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
+    Snort: "https://cdn.simpleicons.org/snort/00ffa3",
 };
 
 const sphereIconMap: Record<string, string> = {
@@ -120,6 +126,11 @@ const sphereIconMap: Record<string, string> = {
     OpenVAS:
         "https://api.iconify.design/game-icons/radar-sweep.svg?color=white",
     REMnux: "https://api.iconify.design/mdi/virus-outline.svg?color=white",
+    Statsmodels:
+        "https://api.iconify.design/mdi/chart-bell-curve-cumulative.svg?color=white",
+    SciPy: "https://cdn.simpleicons.org/scipy/FFFFFF",
+    "Scikit-learn": "https://cdn.simpleicons.org/scikitlearn/FFFFFF",
+    Snort: "https://cdn.simpleicons.org/snort/FFFFFF",
 };
 
 const skillCategories = [
@@ -150,6 +161,25 @@ const skillCategories = [
         ],
     },
     {
+        title: "Data Science",
+        icon: "bar-chart-2",
+        skills: [
+            "Pandas",
+            "NumPy",
+            "SciPy",
+            "Scikit-learn",
+            "Statsmodels",
+            "Plotly",
+            "Matplotlib",
+            "Seaborn",
+        ],
+    },
+    {
+        title: "Cybersecurity",
+        icon: "shield",
+        skills: ["Kali Linux", "REMnux", "OWASP", "Nessus", "OpenVAS", "Snort"],
+    },
+    {
         title: "Database Management",
         icon: "database",
         skills: [
@@ -167,16 +197,6 @@ const skillCategories = [
         icon: "cloud",
         skills: ["AWS", "Docker", "Jenkins", "Git", "GitLab", "Vercel"],
     },
-    {
-        title: "Data Science",
-        icon: "bar-chart-2",
-        skills: ["Pandas", "NumPy", "Plotly", "Matplotlib", "Seaborn"],
-    },
-    {
-        title: "Cybersecurity",
-        icon: "shield",
-        skills: ["Kali Linux", "REMnux", "OWASP", "Nessus", "OpenVAS"],
-    },
 ];
 ---
 
@@ -184,7 +204,7 @@ const skillCategories = [
     <div class="relative z-10">
         <!-- Tech Ticker -->
         <div
-            class="relative w-full py-4 mb-16 overflow-hidden bg-card !rounded-none border-x-0 border-y border-white/10"
+            class="relative w-full py-4 mb-24 overflow-hidden bg-card !rounded-none border-x-0 border-y border-white/10"
         >
             <!-- Continuous Marquee Container -->
             <div class="flex whitespace-nowrap animate-ticker w-max">
@@ -230,13 +250,17 @@ const skillCategories = [
                                 "OWASP",
                                 "Nessus",
                                 "OpenVAS",
+                                "Statsmodels",
+                                "SciPy",
+                                "Scikit-learn",
+                                "Snort",
                             ].map((techName) => (
                                 <div class="flex items-center gap-4 px-8 transition-all duration-300 hover:scale-110 cursor-default opacity-80 hover:opacity-100">
-                                    {iconMap[techName] && (
+                                    {sphereIconMap[techName] && (
                                         <img
-                                            src={iconMap[techName]}
+                                            src={sphereIconMap[techName]}
                                             alt={techName}
-                                            class="w-6 h-6"
+                                            class="w-6 h-6 brightness-0 invert"
                                         />
                                     )}
                                     <span class="text-xs font-mono text-slate-300 font-medium uppercase tracking-widest">
@@ -1058,6 +1082,10 @@ const skillCategories = [
                                 "OWASP",
                                 "Nessus",
                                 "OpenVAS",
+                                "Statsmodels",
+                                "SciPy",
+                                "Scikit-learn",
+                                "Snort",
                             ].map((name) => ({
                                 name,
                                 icon: sphereIconMap[name] || "",
