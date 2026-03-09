@@ -12,12 +12,12 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 │   ├── components/         # UI Components (Multi-language support)
 │   │   ├── en/             # English Translated Components
 │   │   ├── About.astro     # High-fidelity Terminal redesign
+│   │   ├── Experience.astro # Professional trajectory section
+│   │   ├── SpecializedLab.astro # Specialized skills & technical lab
 │   │   ├── Certifications.astro # Credly Certifications Section
 │   │   ├── CustomCursor.astro # Neon trailing cursor
 │   │   └── ...
 │   ├── fonts/              # Local Fonts (Aldrich & Roboto Condensed)
-│   │   ├── Aldrich-Regular.ttf
-│   │   └── RobotoCondensed-Regular.ttf
 │   ├── layouts/
 │   │   └── Layout.astro    # Base template with dynamic meta tags
 │   ├── pages/
@@ -26,7 +26,7 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 │   │   └── og.png.ts       # Dynamic OG Image Generator Endpoint
 │   └── styles/
 │       └── global.css      # Custom Tailwind utilities & animations
-├── package.json            # Dependencies (Tailwind v4, Alpine.js, Satori)
+├── package.json            # Dependencies (Tailwind v4, Astro 5, Alpine.js)
 └── astro.config.mjs        # Astro configuration
 ```
 

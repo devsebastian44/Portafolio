@@ -88,13 +88,58 @@
   /* Cyberpunk Terminal Styles */
   .btn-terminal-solid {
     @apply px-6 py-3 bg-[#00ffa3] text-black font-mono font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center gap-2;
-    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.9);
+    box-shadow: 4px 4px 0 rgba(255, 255, 255, 1);
   }
 
   .btn-terminal-solid:hover {
     @apply bg-white;
-    transform: translate(-2px, -2px);
+    transform: translate(-1px, -1px);
     box-shadow: 6px 6px 0 var(--acc-primary);
+  }
+
+  /* .EXE Button Variant */
+  .btn-exe {
+    @apply px-8 py-4 bg-[#00ffa3] text-[#050505] font-mono font-black uppercase tracking-tighter rounded-sm transition-all duration-200 flex items-center justify-center gap-3 relative overflow-hidden;
+    box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.9);
+  }
+
+  .btn-exe:hover {
+    @apply bg-white;
+    transform: translate(-1px, -1px);
+    box-shadow: 7px 7px 0px var(--acc-primary);
+  }
+
+  .btn-exe:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+  }
+
+  /* Navbar Redesign Styles (Inverted / Dark) */
+  .nav-terminal-box {
+    background-color: var(--bg-dark);
+    @apply border-2 border-white/10 flex items-center transition-all duration-200 rounded-xl overflow-hidden;
+    box-shadow: 6px 6px 0px #00ffa3;
+  }
+
+  .nav-terminal-box:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 8px 8px 0px #00ffa3;
+  }
+
+  .nav-dot-pattern {
+    background-image: radial-gradient(circle, #00ffa3 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.05;
+  }
+
+  .nav-link-terminal {
+    @apply px-4 py-2 text-[12px] font-mono font-bold text-white hover:text-black hover:bg-[#00ffa3] transition-all uppercase flex items-center gap-1;
+  }
+
+  /* Terminal Status Badge */
+  .badge-terminal {
+    @apply px-4 py-2 bg-black text-white font-mono font-bold uppercase tracking-widest rounded-sm border border-white/10 flex items-center justify-center relative;
+    box-shadow: 4px 4px 0px var(--acc-primary);
   }
 
   .btn-terminal-outline {

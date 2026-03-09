@@ -15,7 +15,9 @@ const socialLinks = [
     </div>
     <div class="container mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h2
+                class="text-3xl md:text-5xl font-bold text-white mb-4 flex items-center justify-center gap-2"
+            >
                 My <span class="text-[#00ffa3]">Contact</span>
             </h2>
             <p
@@ -32,12 +34,22 @@ const socialLinks = [
                 <div
                     class="flex-[1.5] p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/5"
                 >
-                    <div class="flex items-center gap-3 mb-10">
-                        <div class="text-[#00ffa3]">
+                    <div
+                        class="flex items-center gap-4 mb-4 border-b border-white/5 pb-4"
+                    >
+                        <div class="flex gap-1.5 focus:outline-none">
+                            <div class="w-2 h-2 rounded-full bg-[#ff5f56]">
+                            </div>
+                            <div class="w-2 h-2 rounded-full bg-[#ffbd2e]">
+                            </div>
+                            <div class="w-2 h-2 rounded-full bg-[#27c93f]">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-[#00ffa3]">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="22"
-                                height="22"
+                                width="14"
+                                height="14"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -49,10 +61,11 @@ const socialLinks = [
                                     d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
                                 ></path></svg
                             >
+                            <span
+                                class="text-[10px] font-mono uppercase tracking-[0.2em] whitespace-nowrap"
+                                >CONTACT_MESSAGE.SYS</span
+                            >
                         </div>
-                        <h3 class="text-xl font-bold text-white">
-                            Send a Message
-                        </h3>
                     </div>
 
                     <form
@@ -61,7 +74,7 @@ const socialLinks = [
                         method="POST"
                         class="space-y-6"
                     >
-                        <div class="space-y-2">
+                        <div class="flex flex-col gap-4">
                             <label
                                 for="name"
                                 class="text-xs font-mono text-slate-500 uppercase tracking-widest"
@@ -76,7 +89,7 @@ const socialLinks = [
                                 class="w-full bg-white/[0.02] border border-white/10 rounded-xl px-5 py-3 text-slate-300 placeholder:text-slate-700 focus:outline-none focus:border-[#00ffa3]/50 transition-colors"
                             />
                         </div>
-                        <div class="space-y-2">
+                        <div class="flex flex-col gap-4">
                             <label
                                 for="email"
                                 class="text-xs font-mono text-slate-500 uppercase tracking-widest"
@@ -91,7 +104,7 @@ const socialLinks = [
                                 class="w-full bg-white/[0.02] border border-white/10 rounded-xl px-5 py-3 text-slate-300 placeholder:text-slate-700 focus:outline-none focus:border-[#00ffa3]/50 transition-colors"
                             />
                         </div>
-                        <div class="space-y-2">
+                        <div class="flex flex-col gap-4">
                             <label
                                 for="message"
                                 class="text-xs font-mono text-slate-500 uppercase tracking-widest"
@@ -109,7 +122,7 @@ const socialLinks = [
                         <button
                             type="submit"
                             id="submit-btn"
-                            class="w-full bg-[#00ffa3] hover:bg-[#00ffa3] text-black font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all active:scale-[0.98] shadow-[0_0_30px_-5px_rgba(0, 255, 163, 0.4)] disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="btn-exe w-full disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             <span id="btn-text" class="flex items-center gap-3">
                                 <svg
@@ -127,7 +140,7 @@ const socialLinks = [
                                         points="22 2 15 22 11 13 2 9 22 2"
                                     ></polyline></svg
                                 >
-                                Send Message
+                                MESSAGE_SEND.EXE
                             </span>
                         </button>
 
@@ -253,23 +266,6 @@ const socialLinks = [
 
                         <div class="space-y-8 mb-12">
                             <div class="flex items-center gap-4">
-                                <div class="text-[#00ffa3]">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        ><path
-                                            d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
-                                        ></path><circle cx="12" cy="10" r="3"
-                                        ></circle></svg
-                                    >
-                                </div>
                                 <span class="text-slate-400 text-sm"
                                     >Ecuador</span
                                 >

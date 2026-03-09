@@ -11,6 +11,11 @@ const navLinks = [
         icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#00ffa3]/50 group-hover:text-[#00ffa3] transition-colors"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>`,
     },
     {
+        name: "Experience",
+        href: "#experience",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#00ffa3]/50 group-hover:text-[#00ffa3] transition-colors"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`,
+    },
+    {
         name: "Projects",
         href: "#projects",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#00ffa3]/50 group-hover:text-[#00ffa3] transition-colors"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>`,
@@ -33,70 +38,79 @@ const navLinks = [
     class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-2 transition-all duration-300"
 >
     <nav
-        class="max-w-[1440px] mx-auto px-6 md:px-10 py-3 flex justify-between items-center bg-black/5 backdrop-blur-md border border-[#00ffa3]/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.2)]"
+        class="max-w-[1440px] mx-auto flex flex-wrap md:flex-nowrap items-center justify-between gap-4 relative z-10 px-4"
     >
-        <a
-            href="/"
-            class="text-2xl font-bold text-white flex items-center gap-3"
-        >
-            <img
-                src="/Img/favicon.png"
-                alt="DevSebastian Logo"
-                class="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(0, 255, 163, 0.8)]"
-            />
-            <span class="tracking-tight">DevSebastian</span>
+        <!-- Brand / Logo Box -->
+        <a href="/" class="nav-terminal-box px-6 py-3 group gap-3">
+            <div class="relative flex items-center justify-center">
+                <div
+                    class="absolute inset-0 bg-[#00ffa3]/20 blur-md rounded-full group-hover:bg-[#00ffa3]/30 transition-colors duration-500"
+                >
+                </div>
+                <img
+                    src="/Img/favicon.png"
+                    alt="DevSebastian Logo"
+                    class="w-8 h-8 object-contain group-hover:rotate-12 transition-transform duration-500 relative z-10"
+                />
+            </div>
+            <span
+                class="text-xl md:text-2xl font-black text-white tracking-tighter uppercase font-['Aldrich'] group-hover:text-[#00ffa3] transition-colors"
+            >
+                DevSebastian<span class="text-[#00ffa3]">.exe</span>
+            </span>
         </a>
 
-        <!-- Desktop Nav -->
-        <div class="hidden md:flex items-center space-x-10">
-            <div class="flex items-center space-x-10">
+        <!-- Desktop Nav Box -->
+        <div class="!hidden md:!flex nav-terminal-box overflow-hidden">
+            <div class="flex items-center">
                 {
                     navLinks.map((link) => (
                         <a
                             href={link.href}
-                            class="group text-[14px] font-medium text-slate-400 hover:text-[#00ffa3] transition-colors tracking-wide font-mono flex items-center gap-2"
+                            class="nav-link-terminal border-r border-black/10 last:border-r-0"
                         >
-                            <Fragment set:html={link.icon} />
-                            {link.name}
+                            {link.name.toUpperCase()}
                         </a>
                     ))
                 }
             </div>
 
-            <a
-                href="/"
-                class="px-4 py-2 bg-[#00ffa3]/10 border border-[#00ffa3]/30 rounded-xl text-[#00ffa3] font-mono text-xs hover:border-[#00ffa3]/50 hover:bg-[#00ffa3]/20 hover:shadow-[0_0_20px_rgba(0, 255, 163, 0.2)] transition-all"
+            <!-- Action Button & Language Switcher -->
+            <div
+                class="flex items-center border-l-2 border-white/10 ml-2 h-full"
             >
-                es
-            </a>
+                <a
+                    href="/"
+                    class="px-6 py-4 bg-[#00ffa3] text-black font-mono font-bold text-[12px] uppercase hover:bg-white transition-all rounded-l-none"
+                >
+                    ES_ES
+                </a>
+            </div>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button
-            class="md:hidden text-white focus:outline-none"
-            @click="isOpen = !isOpen"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+        <!-- Mobile Controls (Visible only on mobile) -->
+        <div class="flex md:hidden items-center gap-2">
+            <button
+                class="nav-terminal-box p-3 focus:outline-none group bg-black hover:bg-[#00ffa3] transition-colors"
+                style="box-shadow: 4px 4px 0px #00ffa3;"
+                @click="isOpen = !isOpen"
             >
-                <path
-                    x-show="!isOpen"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16m-7 6h7"></path>
-                <path
-                    x-show="isOpen"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+                <div class="flex flex-col gap-1.5">
+                    <div
+                        class="w-8 h-[2px] bg-[#00ffa3] group-hover:bg-black transition-all"
+                    >
+                    </div>
+                    <div
+                        class="w-10 h-[2px] bg-white group-hover:bg-black transition-all"
+                    >
+                    </div>
+                    <div
+                        class="w-6 h-[2px] bg-[#00ffa3] group-hover:bg-black transition-all ml-auto"
+                    >
+                    </div>
+                </div>
+            </button>
+        </div>
     </nav>
 
     <!-- Mobile Nav Overlay -->
@@ -119,21 +133,21 @@ const navLinks = [
 
         <!-- Menu Header -->
         <div
-            class="relative z-10 flex items-center justify-between px-10 py-8 border-b border-white/10"
+            class="relative z-10 flex items-center justify-between px-10 py-8 border-b border-[#00ffa3]/20 bg-black"
         >
-            <div class="flex items-center gap-3">
-                <img
-                    src="/Img/favicon.png"
-                    alt="Logo"
-                    class="w-8 h-8 object-contain"
-                />
-                <span class="text-xl font-bold text-white tracking-tight"
-                    >Menu</span
+            <div class="flex flex-col">
+                <span
+                    class="text-[10px] font-mono text-[#00ffa3] tracking-[0.3em] uppercase opacity-70"
+                    >Access_Granted</span
+                >
+                <span
+                    class="text-2xl font-black text-white tracking-widest uppercase font-['Aldrich']"
+                    >SYSTEM_MENU</span
                 >
             </div>
             <button
                 @click="isOpen = false"
-                class="text-slate-400 hover:text-[#00ffa3] transition-colors p-2 bg-white/5 rounded-lg border border-white/10"
+                class="text-[#00ffa3] hover:bg-[#00ffa3]/10 transition-colors p-3 bg-white/5 rounded-none border border-[#00ffa3]/30"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +167,7 @@ const navLinks = [
 
         <!-- Navigation Links -->
         <div
-            class="relative z-10 flex-1 overflow-y-auto py-12 px-10 flex flex-col gap-6"
+            class="relative z-10 flex-1 overflow-y-auto py-12 px-10 flex flex-col gap-8"
         >
             <div class="flex flex-col gap-4">
                 {
@@ -161,28 +175,15 @@ const navLinks = [
                         <a
                             href={link.href}
                             @click="isOpen = false"
-                            class="group flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-2xl text-xl font-bold font-mono tracking-tighter text-white hover:border-[#00ffa3]/30 hover:bg-[#00ffa3]/5 transition-all duration-300"
+                            class="group flex items-center justify-between p-5 bg-white/[0.02] border border-white/10 rounded-none text-lg font-black font-mono tracking-[0.1em] text-white hover:border-[#00ffa3]/50 hover:bg-[#00ffa3]/5 transition-all duration-300"
                         >
                             <div class="flex items-center gap-4">
-                                <span class="text-[#00ffa3] drop-shadow-[0_0_8px_rgba(0,255,163,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(0,255,163,0.6)]">
+                                <span class="text-[#00ffa3] opacity-50 group-hover:opacity-100 transition-opacity">
                                     <Fragment set:html={link.icon} />
                                 </span>
-                                {link.name}
+                                {link.name.toUpperCase()}
                             </div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-white/20 group-hover:text-[#00ffa3] transition-colors"
-                            >
-                                <polyline points="9 18 15 12 9 6" />
-                            </svg>
+                            <div class="w-2 h-2 bg-[#00ffa3] opacity-0 group-hover:opacity-100 transition-opacity" />
                         </a>
                     ))
                 }
@@ -191,19 +192,19 @@ const navLinks = [
             <!-- Language Switcher Section -->
             <div class="mt-8 pt-8 border-t border-white/10">
                 <p
-                    class="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 mb-4"
+                    class="text-[10px] font-mono uppercase tracking-[0.4em] text-[#00ffa3]/50 mb-6"
                 >
-                    Select Language
+                    _Switch_Environment
                 </p>
                 <a
                     href="/"
                     @click="isOpen = false"
-                    class="flex items-center justify-center gap-3 w-full py-4 bg-[#00ffa3]/10 border border-[#00ffa3]/30 rounded-2xl text-[#00ffa3] font-bold font-mono text-center hover:shadow-[0_0_30px_rgba(0,255,163,0.15)] transition-all uppercase tracking-widest text-xs"
+                    class="flex items-center justify-center gap-4 w-full py-5 bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] font-black font-mono text-center hover:bg-[#00ffa3] hover:text-black transition-all uppercase tracking-[0.2em] text-xs shadow-[0_0_20px_rgba(0,255,163,0.1)]"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="18"
+                        height="18"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -218,7 +219,7 @@ const navLinks = [
                             d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
                         ></path></svg
                     >
-                    Versión Español
+                    Spanish_Kernel
                 </a>
             </div>
         </div>
