@@ -1,18 +1,25 @@
 ---
 const certifications = [
     {
-        title: "Linux Essentials",
-        issuer: "Cisco",
-        date: "Jul 2025",
-        url: "https://www.credly.com/badges/46f4abdc-63fb-4a58-9030-c0ea06557041",
-        icon: "simple-icons:cisco"
+        title: "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
+        issuer: "Oracle",
+        date: "Oct 2025",
+        url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=87242A61CA273B46E714BAEB244F65929194C01D9660B6313844192C08FE8D98",
+        icon: "simple-icons:oracle"
     },
     {
-        title: "Agile Explorer",
-        issuer: "IBM",
+        title: "Oracle Cloud Infrastructure 2025 Certified Architect Associate",
+        issuer: "Oracle",
         date: "Sep 2025",
-        url: "https://www.credly.com/badges/ae281b27-f0b2-446e-9889-d0e0c1fdf042",
-        icon: "simple-icons:ibm"
+        url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=A0407BA7D610B27BC2DAA35FB435E4C00AFD4ACCC959ED8E58F4F1FB4CA88FC2",
+        icon: "simple-icons:oracle"
+    },
+    {
+        title: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
+        issuer: "Oracle",
+        date: "Aug 2025",
+        url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=FE7AA7B9184525E8267F269D5606A9E124C76DC4603A1604FD46DE37D29B8A30",
+        icon: "simple-icons:oracle"
     },
     {
         title: "AWS Knowledge: Security Champion",
@@ -22,13 +29,6 @@ const certifications = [
         icon: "simple-icons:amazonaws"
     },
     {
-        title: "Getting Started with Cybersecurity",
-        issuer: "IBM",
-        date: "Sep 2025",
-        url: "https://www.credly.com/badges/95d0d024-b94a-491f-9f2a-6b007f81dc0e",
-        icon: "simple-icons:ibm"
-    },
-    {
         title: "Artificial Intelligence Fundamentals",
         issuer: "IBM",
         date: "Sep 2025",
@@ -36,11 +36,11 @@ const certifications = [
         icon: "simple-icons:ibm"
     },
     {
-        title: "Big Data Foundations - Level 2",
-        issuer: "IBM",
+        title: "Linux Essentials",
+        issuer: "Cisco",
         date: "Jul 2025",
-        url: "https://www.credly.com/badges/0522cc77-78d1-4b8f-ba82-c0526162af18",
-        icon: "simple-icons:ibm"
+        url: "https://www.credly.com/badges/46f4abdc-63fb-4a58-9030-c0ea06557041",
+        icon: "simple-icons:cisco"
     }
 ];
 ---
@@ -61,9 +61,9 @@ const certifications = [
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 max-w-7xl mx-auto">
             {certifications.map((cert) => (
-                <div class="w-full group relative bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col gap-6 transition-all duration-300 hover:border-[#00ffa3]/30 hover:bg-white/[0.04] hover:shadow-[0_0_30px_rgba(0,255,163,0.05)] overflow-hidden">
+                <div class="bg-card w-full group p-6 md:p-8 flex flex-col gap-6">
                     
                     <!-- Decorative corner element -->
                     <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
@@ -72,10 +72,10 @@ const certifications = [
 
                     <!-- Header Row: Date & Icon -->
                     <div class="flex items-center justify-between relative z-10">
-                        <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00ffa3] group-hover:bg-[#00ffa3]/10 transition-colors">
+                        <div class="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center text-[#00ffa3] group-hover:bg-[#00ffa3]/20 transition-colors">
                             <iconify-icon icon={cert.icon} width="20" height="20"></iconify-icon>
                         </div>
-                        <div class="flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full">
+                        <div class="flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-sm">
                             <span class="text-[10px] font-mono text-slate-400 font-bold tracking-wider">{cert.date}</span>
                         </div>
                     </div>
@@ -102,14 +102,14 @@ const certifications = [
         </div>
 
         <!-- More Certifications Button -->
-        <div class="mt-20 flex justify-center relative z-10">
+        <div class="mt-24 flex justify-center relative z-10">
             <a 
-                href="https://www.credly.com/users/devsebastian44/badges" 
+                href="https://www.linkedin.com/in/devsebastian44/details/certifications/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 class="btn-exe group/credly"
             >
-                <span class="relative z-10">CREDLY_CERTIFICATES.EXE</span>
+                <span class="relative z-10">LINKEDIN_CERTIFICATES.EXE</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/credly:rotate-12 transition-transform">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -119,3 +119,4 @@ const certifications = [
         </div>
     </div>
 </section>
+

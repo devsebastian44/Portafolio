@@ -49,22 +49,19 @@
   }
 
   .bg-card {
-    @apply bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-[2rem] transition-all duration-500 overflow-hidden relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    @apply bg-[#0a0a0a] border-2 border-white/10 rounded-sm transition-all duration-300 overflow-hidden relative;
+    box-shadow: 6px 6px 0px #00ffa3;
   }
 
   .bg-card:hover {
-    @apply border-white/20 bg-white/[0.04];
-    box-shadow: 0 0 30px rgba(0, 220, 130, 0.05);
+    @apply border-[#00ffa3];
+    transform: translate(-3px, -3px);
+    box-shadow: 10px 10px 0px #00ffa3;
   }
 
-  .bg-card::after {
-    content: '';
-    @apply absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00ffa3]/50 to-transparent opacity-0 transition-opacity duration-500;
-  }
-
-  .bg-card:hover::after {
-    @apply opacity-100;
+  .bg-card:active {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px #00ffa3;
   }
 
   .tag-glass {
@@ -116,8 +113,8 @@
 
   /* Navbar Redesign Styles (Inverted / Dark) */
   .nav-terminal-box {
-    background-color: var(--bg-dark);
-    @apply border-2 border-white/10 flex items-center transition-all duration-200 rounded-xl overflow-hidden;
+    background-color: #0a0a0a;
+    @apply border-2 border-white/10 flex items-center transition-all duration-200 rounded-sm overflow-hidden;
     box-shadow: 6px 6px 0px #00ffa3;
   }
 
