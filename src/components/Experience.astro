@@ -50,10 +50,10 @@ const experience = [
             <!-- Experience Items Container -->
             <div class="flex flex-col gap-24 md:gap-32 relative">
                 {experience.map((item, index) => (
-                    <div class={`relative flex items-center justify-start md:justify-between w-full group ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    <div class={`relative flex items-center justify-start md:justify-between w-full group pointer-events-none ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                         
                         <!-- Content Card -->
-                        <div class="w-full md:w-[45%] pl-12 md:pl-0">
+                        <div class="w-full md:w-[45%] pl-12 md:pl-0 pointer-events-auto">
                             <div class="bg-card w-full p-8 relative hover:bg-[#00ffa3]/5 transition-all duration-300">
                                 <div class="absolute inset-0 bg-gradient-to-br from-[#00ffa3]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 
@@ -84,7 +84,7 @@ const experience = [
                                 </div>
 
                                 <!-- Decorative background icon -->
-                                <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-700 pointer-events-none group-hover:rotate-12 group-hover:scale-110">
+                                <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.05] group-hover:opacity-[0.12] transition-all duration-700 pointer-events-none group-hover:rotate-12 group-hover:scale-110">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="#00ffa3" stroke-width="0.5">
                                         <path d="M12 2v20M2 12h20M12 2l-4 4M12 2l4 4M12 22l-4-4M12 22l4-4M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l4 4"/>
                                     </svg>
@@ -93,7 +93,7 @@ const experience = [
                         </div>
 
                         <!-- Timeline Marker (Center) -->
-                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-8 md:top-12 md:-translate-y-0 z-20 flex justify-center w-8 md:w-auto">
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-8 md:top-12 md:-translate-y-0 z-20 flex justify-center w-8 md:w-auto pointer-events-auto">
                             <div class="w-6 h-6 bg-[#00ffa3] border-2 border-black shadow-[4px_4px_0px_rgba(0,255,163,0.3)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-45 group-hover:shadow-[4px_4px_0px_#00ffa3]"></div>
                         </div>
 

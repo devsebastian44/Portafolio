@@ -49,14 +49,39 @@
   }
 
   .bg-card {
-    @apply bg-[#0a0a0a] border-2 border-white/10 rounded-sm transition-all duration-300 overflow-hidden relative;
-    box-shadow: 6px 6px 0px #00ffa3;
+    background: linear-gradient(145deg, #111111 0%, #050505 100%);
+    @apply border-2 border-white/10 rounded-sm transition-all duration-300 overflow-hidden relative;
+    box-shadow: 
+      6px 6px 0px #00ffa3,
+      inset 0 0 20px rgba(255, 255, 255, 0.02);
+  }
+
+  .bg-card::before {
+    content: "";
+    @apply absolute inset-0 opacity-[0.15] pointer-events-none z-0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3C/filter%3%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3C/svg%3");
+  }
+
+  /* Blueprint Grid Pattern */
+  .bg-card::after {
+    content: "";
+    @apply absolute inset-0 opacity-[0.04] pointer-events-none z-0;
+    background-image: 
+      linear-gradient(rgba(0, 255, 163, 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 163, 0.4) 1px, transparent 1px);
+    background-size: 20px 20px;
   }
 
   .bg-card:hover {
-    @apply border-[#00ffa3];
+    @apply border-[#00ffa3]/40;
     transform: translate(-3px, -3px);
-    box-shadow: 10px 10px 0px #00ffa3;
+    box-shadow: 
+      10px 10px 0px #00ffa3,
+      inset 0 0 30px rgba(0, 255, 163, 0.05);
+  }
+
+  .bg-card:hover::after {
+    @apply opacity-[0.07] transition-opacity duration-500;
   }
 
   .bg-card:active {
@@ -113,9 +138,24 @@
 
   /* Navbar Redesign Styles (Inverted / Dark) */
   .nav-terminal-box {
-    background-color: #0a0a0a;
-    @apply border-2 border-white/10 flex items-center transition-all duration-200 rounded-sm overflow-hidden;
+    background: linear-gradient(145deg, #111111 0%, #050505 100%);
+    @apply border-2 border-white/10 flex items-center transition-all duration-200 rounded-sm overflow-hidden relative;
     box-shadow: 6px 6px 0px #00ffa3;
+  }
+
+  .nav-terminal-box::before {
+    content: "";
+    @apply absolute inset-0 opacity-[0.12] pointer-events-none z-0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3C/filter%3%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3C/svg%3");
+  }
+
+  .nav-terminal-box::after {
+    content: "";
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none z-0;
+    background-image: 
+      linear-gradient(rgba(0, 255, 163, 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 163, 0.3) 1px, transparent 1px);
+    background-size: 15px 15px;
   }
 
   .nav-terminal-box:hover {
