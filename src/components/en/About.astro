@@ -204,7 +204,7 @@ const skillCategories = [
     <div class="relative z-10">
         <!-- Tech Ticker -->
         <div
-            class="relative w-full py-4 mb-24 overflow-hidden bg-card !rounded-none border-x-0 border-y border-white/10"
+            class="relative w-full py-4 mb-24 overflow-hidden bg-white/[0.02] backdrop-blur-sm border-y border-white/5"
         >
             <!-- Continuous Marquee Container -->
             <div class="flex whitespace-nowrap animate-ticker w-max">
@@ -384,10 +384,16 @@ const skillCategories = [
                                     ><path
                                         d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
                                     ></path><polyline points="14 2 14 8 20 8"
-                                    ></polyline></svg
-                                >
                                 <span>CV_DOWNLOAD.EXE</span>
                             </a>
+                        </div>
+
+                        <!-- Decorative background icon -->
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.05] group-hover:opacity-[0.12] transition-all duration-700 pointer-events-none group-hover:rotate-12 group-hover:scale-110">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#00ffa3" stroke-width="0.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
                         </div>
                     </div>
 
@@ -883,6 +889,8 @@ const skillCategories = [
                                 </div>
                             ))
                         }
+                    </div>
+
                     </div>
                 </div>
 

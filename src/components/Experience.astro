@@ -5,10 +5,10 @@ const experience = [
         company: "@ TRABAJO_AUTÓNOMO",
         period: "2023 - PRESENTE",
         description: [
-            "Realización de pruebas de penetración y evaluaciones de seguridad en aplicaciones web.",
-            "Identificación y explotación ética de vulnerabilidades críticas (OWASP Top 10).",
-            "Implementación de medidas preventivas y auditorías de seguridad proactivas.",
-            "Consultoría en hardening de sistemas y mejores prácticas de seguridad digital."
+            "Ejecución de auditorías de seguridad y pentesting avanzado en entornos web complejos.",
+            "Mitigación estratégica de riesgos críticos bajo estándares OWASP y normativas de seguridad.",
+            "Diseño de arquitecturas seguras y blindaje de sistemas (Hardening) para infraestructuras digitales.",
+            "Consultoría técnica especializada en respuesta a incidentes y prevención de brechas de datos."
         ]
     },
     {
@@ -16,10 +16,10 @@ const experience = [
         company: "@ TRABAJO_AUTÓNOMO",
         period: "2022 - PRESENTE",
         description: [
-            "Desarrollo de aplicaciones web responsivas e interactivas utilizando HTML5, CSS3 y JavaScript.",
-            "Desarrollo de aplicaciones web modernas con React, Next.js y Node.js.",
-            "Creación de soluciones web personalizadas adaptadas a los requisitos del cliente.",
-            "Integración de principios de seguridad desde el diseño hasta la implementación (DevSecOps)."
+            "Arquitectura y despliegue de soluciones Full-stack escalables con React, Next.js y Node.js.",
+            "Optimización de rendimiento y SEO técnico para plataformas web de alto tráfico.",
+            "Desarrollo de APIs robustas y sistemas de gestión de datos distribuidos.",
+            "Implementación de flujos CI/CD integrando auditorías automáticas de seguridad (DevSecOps)."
         ]
     }
 ];
@@ -39,57 +39,66 @@ const experience = [
                 Mis <span class="text-[#00ffa3]">Experiencias</span>
             </h2>
             <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-                Un recorrido por mi trayectoria profesional, los retos que he superado y las soluciones que he aportado.
+                Trayectoria enfocada en la creación de software seguro, escalable y centrado en el usuario.
             </p>
         </div>
 
-        <div class="relative max-w-5xl mx-auto">
+        <div class="relative max-w-6xl mx-auto">
             <!-- Timeline Line -->
-            <div class="absolute left-[15px] top-0 bottom-0 w-[2px] bg-white/10 hidden md:block"></div>
+            <div class="absolute left-[15px] md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-white/10"></div>
 
             <!-- Experience Items Container -->
-            <div class="flex flex-col gap-16 pt-4">
+            <div class="flex flex-col gap-24 md:gap-32 relative">
                 {experience.map((item, index) => (
-                    <div class="flex gap-8 md:gap-12 relative group">
-                        <!-- Timeline Marker -->
-                        <div class="hidden md:flex w-8 justify-center relative z-10 pt-1">
-                            <div class="w-6 h-6 bg-[#00ffa3] border-2 border-black shadow-[4px_4px_0px_rgba(0,255,163,0.3)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-45 group-hover:bg-[#00ffa3] group-hover:shadow-[4px_4px_0px_#00ffa3]"></div>
-                        </div>
+                    <div class={`relative flex items-center justify-start md:justify-between w-full group pointer-events-none ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                        
+                        <!-- Content Card -->
+                        <div class="w-full md:w-[45%] pl-12 md:pl-0 pointer-events-auto">
+                            <div class="bg-card w-full p-8 relative hover:bg-[#00ffa3]/5 transition-all duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-br from-[#00ffa3]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                
+                                <div class="flex flex-col gap-6 relative z-10">
+                                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                                        <h3 class="text-base md:text-xl font-black text-white tracking-widest uppercase font-['Aldrich'] group-hover:text-[#00ffa3] transition-colors leading-tight flex-grow max-w-full sm:max-w-[70%]">
+                                            {item.title}
+                                        </h3>
+                                        <div class="shrink-0 btn-exe !px-3 font-['Aldrich'] !py-1.5 !text-[9px] md:!text-[10px] !tracking-widest !gap-0 shadow-[3px_3px_0px_#ffffff] bg-[#00ffa3] text-black font-black whitespace-nowrap self-start">
+                                            {item.period}
+                                        </div>
+                                    </div>
 
-                        <!-- Card -->
-                        <div class="flex-1 bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-xl p-8 relative transition-all duration-500 hover:border-[#00ffa3]/30 hover:bg-white/[0.04] group-hover:shadow-[0_0_40px_rgba(0,255,163,0.05)] overflow-hidden">
+                                    <div class="border-t border-dashed border-white/20 pt-6">
+                                        <p class="text-[#00ffa3] font-bold text-sm md:text-base tracking-[0.2em] font-mono uppercase flex items-center gap-2">
+                                            <span class="text-[#00ffa3]/50">@</span> {item.company.replace('@ ', '')}
+                                        </p>
+                                    </div>
 
-                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 relative z-10">
-                                <h3 class="text-lg md:text-2xl font-black text-white tracking-widest uppercase font-['Aldrich'] group-hover:text-[#00ffa3] transition-colors leading-tight">
-                                    {item.title}
-                                </h3>
-                                <div class="whitespace-nowrap btn-exe !px-4 !py-1.5 !text-[10px] md:!text-xs !tracking-widest !gap-0 shadow-[3px_3px_0px_rgba(255,255,255,0.9)]">
-                                    {item.period}
+                                    <ul class="space-y-4">
+                                        {item.description.map(bullet => (
+                                            <li class="flex items-start gap-4 text-slate-400 text-sm md:text-base leading-relaxed group/item transition-colors hover:text-slate-200">
+                                                <div class="min-w-[6px] h-[6px] bg-[#00ffa3]/50 rounded-full mt-2 group-hover/item:bg-[#00ffa3] group-hover/item:scale-125 transition-all"></div>
+                                                <span>{bullet}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <!-- Decorative background icon -->
+                                <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.05] group-hover:opacity-[0.12] transition-all duration-700 pointer-events-none group-hover:rotate-12 group-hover:scale-110">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#00ffa3" stroke-width="0.5">
+                                        <path d="M12 2v20M2 12h20M12 2l-4 4M12 2l4 4M12 22l-4-4M12 22l4-4M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l4 4"/>
+                                    </svg>
                                 </div>
                             </div>
-
-                            <div class="border-t border-dashed border-white/20 pt-6 mb-8 relative z-10">
-                                <p class="text-[#00ffa3] font-bold text-sm md:text-base tracking-[0.2em] font-mono uppercase flex items-center gap-2">
-                                    <span class="text-[#00ffa3]/50">@</span> {item.company.replace('@ ', '')}
-                                </p>
-                            </div>
-
-                            <ul class="space-y-4 relative z-10">
-                                {item.description.map(bullet => (
-                                    <li class="flex items-start gap-4 text-slate-400 text-sm md:text-base leading-relaxed group/item transition-colors hover:text-slate-200">
-                                        <div class="min-w-[6px] h-[6px] bg-[#00ffa3]/50 rounded-full mt-2 group-hover/item:bg-[#00ffa3] group-hover/item:scale-125 transition-all"></div>
-                                        <span>{bullet}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <!-- Decorative background icon -->
-                            <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.03] group-hover:opacity-[0.08] transition-all duration-700 pointer-events-none group-hover:rotate-12 group-hover:scale-110">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="#00ffa3" stroke-width="0.5">
-                                    <path d="M12 2v20M2 12h20M12 2l-4 4M12 2l4 4M12 22l-4-4M12 22l4-4M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l4 4"/>
-                                </svg>
-                            </div>
                         </div>
+
+                        <!-- Timeline Marker (Center) -->
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-8 md:top-12 md:-translate-y-0 z-20 flex justify-center w-8 md:w-auto pointer-events-auto">
+                            <div class="w-6 h-6 bg-[#00ffa3] border-2 border-black shadow-[4px_4px_0px_rgba(0,255,163,0.3)] transition-all duration-300 group-hover:scale-110 group-hover:rotate-45 group-hover:shadow-[4px_4px_0px_#00ffa3]"></div>
+                        </div>
+
+                        <!-- Spacer for Desktop -->
+                        <div class="hidden md:block md:w-[45%]"></div>
                     </div>
                 ))}
             </div>

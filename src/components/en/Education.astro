@@ -1,0 +1,78 @@
+---
+const education = [
+    {
+        school: "Alura Latam",
+        program: "Oracle Next Education Program (ONE)",
+        field: "Data Science & AI",
+        period: "Jul 2025 – Mar 2026",
+        description: "Intensive specialization in Data Science and AI. Developed advanced capabilities in statistical analysis, predictive modeling, and visualization using Python. The program focused on building data-driven solutions and applying Machine Learning algorithms to solve real-world technology ecosystem problems.",
+        logo: "/Img/alura-logo.png"
+    }
+];
+---
+
+<section id="education" class="py-24 relative bg-transparent">
+    <!-- Background Glow -->
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[300px] md:h-[500px] bg-[#00ffa3]/5 blur-[120px] md:blur-[150px] rounded-full pointer-events-none z-0"
+    >
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+                My <span class="text-[#00ffa3]">Education</span>
+            </h2>
+            <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                Academic trajectory and technical specialization programs.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-8">
+            {education.map((edu) => (
+                <div class="bg-card p-8 md:p-10 group relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#00ffa3]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div class="flex flex-col md:flex-row gap-8 relative z-10">
+                        <!-- School Info -->
+                        <div class="md:w-1/3 space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-[#00ffa3] transition-colors">{edu.school}</h3>
+                                    <p class="text-[#00ffa3] text-xs font-mono font-bold tracking-tighter uppercase">{edu.field}</p>
+                                </div>
+                            </div>
+                            <div class="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-sm">
+                                <span class="text-[10px] font-mono text-slate-400 font-bold uppercase tracking-wider">{edu.period}</span>
+                            </div>
+                        </div>
+
+                        <!-- Program Details -->
+                        <div class="md:w-2/3 space-y-4 border-l border-white/10 md:pl-8">
+                            <h4 class="text-lg font-bold text-slate-200">{edu.program}</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                {edu.description}
+                            </p>
+                            
+                            <!-- Skills Tags -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-sm text-[10px] font-mono text-slate-500 uppercase">Data Science</span>
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-sm text-[10px] font-mono text-slate-500 uppercase">AI</span>
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-sm text-[10px] font-mono text-slate-500 uppercase">Python</span>
+                                <span class="px-2 py-1 bg-white/5 border border-white/10 rounded-sm text-[10px] font-mono text-slate-500 uppercase">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative background icon -->
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.05] group-hover:opacity-[0.12] transition-all duration-700 pointer-events-none group-hover:rotate-12 group-hover:scale-110">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#00ffa3" stroke-width="0.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

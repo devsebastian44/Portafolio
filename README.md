@@ -1,6 +1,6 @@
 # Portfolio: Sebastian Zhunaula | Full Stack Architect
 
-Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **Alpine.js**, featuring full multi-language support and a high-performance terminal aesthetic.
+Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **Alpine.js**, featuring full multi-language support, a high-performance terminal aesthetic, and premium visual materials.
 
 ## 🚀 Key Project Structure
 
@@ -12,6 +12,7 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 │   ├── components/         # UI Components (Multi-language support)
 │   │   ├── en/             # English Translated Components
 │   │   ├── About.astro     # High-fidelity Terminal redesign
+│   │   ├── Education.astro # Academic trajectory section [NEW]
 │   │   ├── Experience.astro # Professional trajectory section
 │   │   ├── SpecializedLab.astro # Specialized skills & technical lab
 │   │   ├── Certifications.astro # Credly Certifications Section
@@ -25,7 +26,7 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 │   │   ├── en.astro        # English Landing Page (/en)
 │   │   └── og.png.ts       # Dynamic OG Image Generator Endpoint
 │   └── styles/
-│       └── global.css      # Custom Tailwind utilities & animations
+│       └── global.css      # Custom Tailwind utilities & premium aesthetics
 ├── package.json            # Dependencies (Tailwind v4, Astro 5, Alpine.js)
 └── astro.config.mjs        # Astro configuration
 ```
@@ -33,11 +34,11 @@ Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **A
 ## 🛠️ Main Tech Stack
 
 *   **Framework**: [Astro 5](https://astro.build/) (Static Site Generation)
-*   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Interactivity**: [Alpine.js](https://alpinejs.dev/) & [Vanilla JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript) (Custom Cursor)
+*   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (Custom Design System)
+*   **Interactivity**: [Alpine.js](https://alpinejs.dev/) & [Vanilla JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 *   **Typography**: Aldrich & Roboto Condensed (Modern high-tech pairing)
 *   **Backend**: [Formspree](https://formspree.io/) (Functional Contact Form)
-*   **OG Generation**: [Satori](https://github.com/vercel/satori) & [Resvg](https://github.com/yisibl/resvg-js) (Dynamic Social Images)
+*   **OG Generation**: [Satori](https://github.com/vercel/satori) & [Resvg](https://github.com/yisibl/resvg-js)
 
 ## 🧞 Commands
 
@@ -52,20 +53,20 @@ All commands are run from the root of the project:
 
 ## ✨ Features
 
+- **Premium Material Design**: Cards feature subtle grain texture, depth-inducing gradients, and inner borders for a glass-like feel.
+- **Cybersecurity Blueprint**: Strategic technical grid patterns in backgrounds and navigation.
+- **Iconic Decorative System**: Thematic SVG icons (Education, Bio, Lab, Contact) with refined visibility (0.05 base / 0.12 hover).
 - **High-Fidelity Terminal**: Redesigned About section with window controls, pixel-art logo, and crosshair lines.
-- **Strategic Localized Glows**: Section-bound background glows (Hero, About, Project, Certifications, CTA, Contact, Footer) for extra depth.
+- **Localized Glows**: Section-bound background glows (Hero, About, Project, Certifications, Contact) for extra depth.
 - **Dynamic Certifications**: Integration of real digital badges/certifications directly mapped from Credly.
-- **Cyber-Neon Cursor**: Custom trailing cursor with neon green aesthetics (`#00ffa3`).
 - **Multi-language**: Seamless switching between Spanish and English with full visual parity.
 - **3D Skill Sphere**: Interactive high-performance canvas component displaying tech stacks.
-- **Functional Contact Form**: Integrated with Formspree and handled via AJAX for a smooth user experience.
-- **Dynamic OG Images**: Programmatically generated preview images (`/og.png`) using Satori.
-- **Refined Branding**: Custom `favicon.png` logo and personalized bio with professional photography.
+- **Functional Contact Form**: Integrated with Formspree and handled via AJAX.
 
 ## 📚 Documentation
 
 For a detailed breakdown of the technical components and file responsibilities, see:
 - [**Technical Structure Guide**](docs/STRUCTURE.md): Deep dive into `About.astro`, `SkillSphere.astro`, and common design patterns.
 
-##  Genie Commands
-...
+---
+*Developed with focus on performance, security, and neo-brutalist aesthetics.*
