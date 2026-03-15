@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+    title="Sebastian Zhunaula - CV" 
+    description="Curriculum Vitae de Sebastian Zhunaula - Full Stack Architect"
+>
+    <main class="w-screen h-screen overflow-hidden bg-black">
+        <embed 
+            src="/CV.pdf" 
+            type="application/pdf" 
+            class="w-full h-full border-none"
+        />
+    </main>
+</Layout>
+
+<style>
+    /* Aseguramos que el layout no añada scroll o márgenes innecesarios */
+    :global(body) {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+</style>
