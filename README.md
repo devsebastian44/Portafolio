@@ -1,72 +1,145 @@
-# Portfolio: Sebastian Zhunaula | Full Stack Architect
+# Sebastian Zhunaula — Portafolio
 
-Minimalist and premium portfolio built with **Astro**, **Tailwind CSS**, and **Alpine.js**, featuring full multi-language support, a high-performance terminal aesthetic, and premium visual materials.
-
-## 🚀 Key Project Structure
-
-```text
-/
-├── public/                 # Static assets (Favicon, PDFs, etc.)
-│   └── Img/                # Profile photo and branding images
-├── src/
-│   ├── components/         # UI Components (Multi-language support)
-│   │   ├── en/             # English Translated Components
-│   │   ├── About.astro     # High-fidelity Terminal redesign
-│   │   ├── Education.astro # Academic trajectory section [NEW]
-│   │   ├── Experience.astro # Professional trajectory section
-│   │   ├── SpecializedLab.astro # Specialized skills & technical lab
-│   │   ├── Certifications.astro # Credly Certifications Section
-│   │   ├── CustomCursor.astro # Neon trailing cursor
-│   │   └── ...
-│   ├── fonts/              # Local Fonts (Aldrich & Roboto Condensed)
-│   ├── layouts/
-│   │   └── Layout.astro    # Base template with dynamic meta tags
-│   ├── pages/
-│   │   ├── index.astro     # Spanish Landing Page (Home)
-│   │   ├── en.astro        # English Landing Page (/en)
-│   │   └── og.png.ts       # Dynamic OG Image Generator Endpoint
-│   └── styles/
-│       └── global.css      # Custom Tailwind utilities & premium aesthetics
-├── package.json            # Dependencies (Tailwind v4, Astro 5, Alpine.js)
-└── astro.config.mjs        # Astro configuration
-```
-
-## 🛠️ Main Tech Stack
-
-*   **Framework**: [Astro 5](https://astro.build/) (Static Site Generation)
-*   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (Custom Design System)
-*   **Interactivity**: [Alpine.js](https://alpinejs.dev/) & [Vanilla JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-*   **Typography**: Aldrich & Roboto Condensed (Modern high-tech pairing)
-*   **Backend**: [Formspree](https://formspree.io/) (Functional Contact Form)
-*   **OG Generation**: [Satori](https://github.com/vercel/satori) & [Resvg](https://github.com/yisibl/resvg-js)
-
-## 🧞 Commands
-
-All commands are run from the root of the project:
-
-| Command | Action |
-| :--- | :--- |
-| `npm install` | Installs dependencies |
-| `npm run dev` | Starts local dev server at `localhost:4321` |
-| `npm run build` | Build your production site to `./dist/` |
-| `npm run preview` | Preview your build locally before deploying |
-
-## ✨ Features
-
-- **Premium Material Design**: Cards feature subtle grain texture, depth-inducing gradients, and inner borders for a glass-like feel.
-- **Cybersecurity Blueprint**: Strategic technical grid patterns in backgrounds and navigation.
-- **Iconic Decorative System**: Thematic SVG icons (Education, Bio, Lab, Contact) with refined visibility (0.05 base / 0.12 hover).
-- **High-Fidelity Terminal**: Redesigned About section with window controls, pixel-art logo, and crosshair lines.
-- **Localized Glows**: Section-bound background glows (Hero, About, Project, Certifications, Contact) for extra depth.
-- **Dynamic Certifications**: Integration of real digital badges/certifications directly mapped from Credly.
-- **Multi-language**: Seamless switching between Spanish and English with full visual parity.
-- **3D Skill Sphere**: Interactive high-performance canvas component displaying tech stacks.
-- **Functional Contact Form**: Integrated with Formspree and handled via AJAX.
-
-## 📚 Documentation
-
-For a detailed breakdown of the technical components and file responsibilities, see:
-- [**Technical Structure Guide**](docs/STRUCTURE.md): Deep dive into `About.astro`, `SkillSphere.astro`, and common design patterns.
+![Astro](https://img.shields.io/badge/Astro-5.x-FF5D01?style=flat&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3.4%25-3178C6?style=flat&logo=typescript&logoColor=white)
+![Alpine.js](https://img.shields.io/badge/Alpine.js-3.x-8BC0D0?style=flat&logo=alpinedotjs&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![Estado](https://img.shields.io/badge/Estado-Activo-22c55e?style=flat)
 
 ---
-*Developed with focus on performance, security, and neo-brutalist aesthetics.*
+
+## 🧠 Descripción General
+
+Portafolio personal premium construido con **Astro 5** como sitio completamente estático, diseñado para reflejar una estética terminal de alto rendimiento. El proyecto resuelve el desafío de presentar el perfil, habilidades, experiencia y certificaciones de un desarrollador de forma visualmente distintiva y accesible a nivel global — con soporte completo para **español** e **inglés** con paridad visual total.
+
+El enfoque técnico prioriza cero-JS por defecto (mediante la arquitectura de islas de Astro), mejora progresiva a través de Alpine.js para componentes interactivos, y un sistema de diseño personalizado construido sobre Tailwind CSS v4. Las imágenes Open Graph dinámicas se generan en tiempo de compilación usando Satori y Resvg, garantizando vistas previas sociales enriquecidas sin necesidad de backend.
+
+**Demo en vivo:** [devsebastian44.vercel.app](https://devsebastian44.vercel.app)
+
+---
+
+## ⚙️ Funcionalidades
+
+- **Soporte multilenguaje** — Cambio fluido ES/EN con traducción a nivel de componente y paridad visual completa entre ambos idiomas.
+- **Terminal UI de alta fidelidad** — Sección "Acerca de" rediseñada como ventana de terminal con controles de ventana, logo pixel-art y decoraciones de mira.
+- **Esfera 3D de Habilidades** — Componente canvas interactivo que renderiza el stack tecnológico en una esfera 3D giratoria usando Chart.js.
+- **Generación dinámica de OG Image** — Endpoint en tiempo de compilación (`/og.png.ts`) impulsado por Satori + Resvg para imágenes de vista previa social autogeneradas.
+- **Certificaciones de Credly** — Insignias digitales reales mapeadas directamente desde Credly y renderizadas en una sección dedicada.
+- **Diseño Material Premium** — Tarjetas con textura grain, bordes interiores tipo cristal, gradientes de profundidad y brillos de neón localizados por sección.
+- **Cursor de neón personalizado** — Componente de cursor con estela de neón para reforzar la marca de laboratorio tecnológico/ciberseguridad.
+- **Formulario de contacto funcional** — Integrado con Formspree y manejado vía AJAX — sin backend requerido.
+- **Patrones de cuadrícula neo-brutalista** — Patrones SVG estilo plano de ciberseguridad usados como elementos decorativos estructurales en todas las secciones.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+| Capa | Tecnología |
+|---|---|
+| Framework | Astro 5 (Generación de Sitio Estático) |
+| Estilos | Tailwind CSS v4 (sistema de diseño personalizado) |
+| Interactividad | Alpine.js v3 + Vanilla JS |
+| Lenguaje | TypeScript (endpoint OG, configuraciones) |
+| Imágenes OG | Satori + @resvg/resvg-js |
+| Gráficos | Chart.js v4 (Esfera de Habilidades) |
+| Formulario | Formspree (AJAX) |
+| Tipografía | Aldrich & Roboto Condensed (fuentes locales) |
+| Despliegue | Vercel |
+
+---
+
+## 📦 Instalación
+
+> **Requisitos:** Node.js ≥ 18.x y npm instalados.
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/devsebastian44/Portafolio.git
+cd Portafolio
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Iniciar el servidor de desarrollo
+npm run dev
+```
+
+El servidor de desarrollo estará disponible en `http://localhost:4321`.
+
+---
+
+## ▶️ Uso
+
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Inicia el servidor local en `localhost:4321` |
+| `npm run build` | Compila el sitio de producción en `./dist/` |
+| `npm run preview` | Vista previa del build de producción en local |
+
+Para desplegar en **Vercel**, simplemente conecta el repositorio — Vercel detecta Astro automáticamente y configura el pipeline de compilación (`astro build`) sin configuración adicional.
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+/
+├── public/
+│   └── Img/                      # Foto de perfil y recursos de marca
+├── src/
+│   ├── components/
+│   │   ├── en/                   # Variantes de componentes en inglés
+│   │   ├── About.astro           # Sección "Acerca de" estilo terminal
+│   │   ├── Education.astro       # Trayectoria académica
+│   │   ├── Experience.astro      # Línea de tiempo profesional
+│   │   ├── SpecializedLab.astro  # Habilidades técnicas y sección lab
+│   │   ├── Certifications.astro  # Integración de insignias Credly
+│   │   ├── CustomCursor.astro    # Cursor con estela de neón
+│   │   └── SkillSphere.astro     # Canvas 3D interactivo (Chart.js)
+│   ├── fonts/                    # Aldrich & Roboto Condensed (locales)
+│   ├── layouts/
+│   │   └── Layout.astro          # Layout base con meta tags dinámicos
+│   ├── pages/
+│   │   ├── index.astro           # Página de inicio en español (/)
+│   │   ├── en.astro              # Página de inicio en inglés (/en)
+│   │   └── og.png.ts             # Endpoint de imagen OG dinámica
+│   └── styles/
+│       └── global.css            # Utilidades Tailwind y estética personalizada
+├── docs/
+│   └── STRUCTURE.md              # Documentación técnica de componentes
+├── astro.config.mjs
+├── tsconfig.json
+└── package.json
+```
+
+---
+
+## 🚀 Roadmap
+
+- [ ] Agregar sección de blog/artículos con soporte MDX
+- [ ] Implementar transiciones de vista (Astro View Transitions API) entre rutas ES/EN
+- [ ] Toggle de tema oscuro/claro con persistencia via `prefers-color-scheme`
+- [ ] Añadir casos de estudio de proyectos con páginas de detalle dedicadas
+- [ ] Integrar analíticas respetuosas de privacidad (Plausible o Umami)
+- [ ] Optimizar puntuación Lighthouse a 100 en todas las categorías
+
+---
+
+## 📄 Licencia
+
+Este proyecto es un portafolio personal y está disponible públicamente como referencia e inspiración. Por favor, no redistribuyas ni despliegues este sitio como propio sin autorización previa y por escrito del autor.
+
+---
+
+## 👨‍💻 Autor
+
+**Sebastian Zhunaula**
+Desarrollador Full Stack · Arquitecto Web · Entusiasta de Ciberseguridad
+
+[![Portafolio](https://img.shields.io/badge/Portafolio-devsebastian44.vercel.app-FF5D01?style=flat&logo=astro&logoColor=white)](https://devsebastian44.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-devsebastian44-181717?style=flat&logo=github&logoColor=white)](https://github.com/devsebastian44)
+
+---
+
+*Desarrollado con enfoque en rendimiento, precisión visual y estética neo-brutalista.*
