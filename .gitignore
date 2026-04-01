@@ -1,24 +1,41 @@
-# build output
+# -----------------------------
+# Web Environment & Build
+# -----------------------------
 dist/
-# generated types
 .astro/
-
-# dependencies
 node_modules/
 
-# logs
+# -----------------------------
+# Logs & Diagnostic
+# -----------------------------
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
 
-
-# environment variables
+# -----------------------------
+# Environment & Secrets (DevSecOps)
+# -----------------------------
 .env
-.env.production
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
 
-# macOS-specific files
+# -----------------------------
+# System & Editor Utilities
+# -----------------------------
 .DS_Store
-
-# jetbrains setting folder
+Thumbs.db
 .idea/
+.vscode/
+
+# -----------------------------
+# Coverage & Test Artifacts
+# -----------------------------
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
