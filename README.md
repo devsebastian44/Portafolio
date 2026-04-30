@@ -10,6 +10,8 @@
 
 ## 🧠 Descripción General
 
+> **Disclaimer:** This project is for educational and ethical cybersecurity purposes only.
+
 Portafolio personal premium construido con **Astro 5** como sitio completamente estático, diseñado para reflejar una estética terminal de alto rendimiento. El proyecto resuelve el desafío de presentar el perfil, habilidades, experiencia y certificaciones de un desarrollador de forma visualmente distintiva y accesible a nivel global — con soporte completo para **español** e **inglés** con paridad visual total.
 
 El enfoque técnico prioriza cero-JS por defecto (mediante la arquitectura de islas de Astro), mejora progresiva a través de Alpine.js para componentes interactivos, y un sistema de diseño personalizado construido sobre Tailwind CSS v4. Las imágenes Open Graph dinámicas se generan en tiempo de compilación usando Satori y Resvg, garantizando vistas previas sociales enriquecidas sin necesidad de backend.
@@ -142,6 +144,20 @@ Para desplegar en **Vercel**, simplemente conecta el repositorio — Vercel dete
 - [ ] Añadir casos de estudio de proyectos con páginas de detalle dedicadas
 - [ ] Integrar analíticas respetuosas de privacidad (Plausible o Umami)
 - [ ] Optimizar puntuación Lighthouse a 100 en todas las categorías
+
+---
+
+## 🤝 Cómo Contribuir
+
+Este proyecto es colaborativo y abierto a contribuciones. Para contribuir, sigue estos pasos:
+
+1. Realiza un **Fork** del repositorio.
+2. Crea una rama para tu característica: `git checkout -b feature/nueva-funcionalidad`
+3. Ejecuta las pruebas localmente: `npm test` y valida con `npm run check`
+4. Haz tus commits siguiendo el estándar de [Conventional Commits](https://www.conventionalcommits.org/).
+5. Realiza un Push a tu fork y abre un **Pull Request** hacia la rama `main` original.
+
+Todas las Pull Requests serán validadas automáticamente mediante GitHub Actions (Linting, Tests y Build).
 
 ---
 
