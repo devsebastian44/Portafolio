@@ -284,7 +284,7 @@ export const GET: APIRoute = async () => {
     const pngData = resvg.render();
     const pngBuffer = pngData.asPng();
 
-    return new Response(pngBuffer, {
+    return new Response(pngBuffer as unknown as BodyInit, {
         headers: {
             "Content-Type": "image/png",
             "Cache-Control": "no-cache",

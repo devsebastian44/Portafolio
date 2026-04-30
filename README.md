@@ -5,8 +5,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3.4%25-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Alpine.js](https://img.shields.io/badge/Alpine.js-3.x-8BC0D0?style=flat&logo=alpinedotjs&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat&logo=vercel&logoColor=white)
-![Estado](https://img.shields.io/badge/Estado-Activo-22c55e?style=flat)
-
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?style=flat&logo=github-actions&logoColor=white)
 ---
 
 ## 🧠 Descripción General
@@ -69,22 +68,21 @@ El servidor de desarrollo estará disponible en `http://localhost:4321`.
 
 ---
 
-## 🛡️ Arquitectura DevSecOps (GitLab → GitHub)
+## 🛡️ Arquitectura Segura (Local → GitHub)
 
-Este proyecto implementa una **separación estricta de entornos** siguiendo principios de DevSecOps, garantizando que el repositorio público mantenga altos estándares de limpieza, mientras que el entorno privado de experimentación se conserva intacto.
+Este proyecto implementa una **separación de entornos**, garantizando que el repositorio público mantenga altos estándares de limpieza, mientras que el entorno local de experimentación se conserva intacto.
 
-- 🦊 **GitLab (Laboratorio Privado)**: Actúa como el *Source of Truth*. Mantiene el 100% del código, incluyendo la suite de pruebas unitarias (`tests/`), pipelines de CI/CD (`.gitlab-ci.yml`), y scripts de automatización interna (`scripts/`).
+- 💻 **Entorno Local**: Actúa como el *Source of Truth*. Mantiene el 100% del código, incluyendo la suite de pruebas unitarias (`tests/`) y scripts de automatización interna (`scripts/`).
 - 🐙 **GitHub (Portafolio Público)**: Versión de solo lectura y sanitizada. Contiene exclusivamente el código fuente necesario para ejecutar y compilar la aplicación, junto con la documentación técnica pública.
 
 ### Flujo Automático de Publicación Segura
 
-Para publicar una nueva actualización desde el repositorio maestro privado hacia GitHub, el proyecto utiliza automatización validada mediante el script `publish_public.ps1`:
+Para publicar una nueva actualización desde el repositorio maestro local hacia GitHub, el proyecto utiliza automatización validada mediante el script `publish_public.ps1`:
 
 1. El script valida la calidad y limpieza del árbol Git local.
-2. Sincroniza y hace un resguardo mandatorio en **GitLab**.
-3. Genera dinámicamente un **release en una rama efímera**.
-4. Ejecuta un purgado de seguridad mediante `git rm --cached`, eliminando el marco de pruebas, el pipeline de CI/CD y los scripts de automatización.
-5. Inyecta los cambios limpios y fuerza un push sanitizado a GitHub.
+2. Genera dinámicamente un **release en una rama efímera**.
+3. Ejecuta un purgado de seguridad mediante `git rm --cached`, eliminando el marco de pruebas y los scripts de automatización.
+4. Inyecta los cambios limpios y fuerza un push sanitizado a GitHub.
 
 Este enfoque previene fugas de lógica de pruebas, credenciales o configuraciones internas.
 
