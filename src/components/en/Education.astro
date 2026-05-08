@@ -14,14 +14,14 @@ const education = [
 <section id="education" class="py-24 relative bg-transparent">
     <!-- Background Glow -->
     <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[300px] md:h-[500px] bg-[#44f688]/5 blur-[120px] md:blur-[150px] rounded-full pointer-events-none z-0"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[700px] h-[300px] md:h-[500px] bg-[var(--acc-primary)]/5 blur-[120px] md:blur-[150px] rounded-full pointer-events-none z-0"
     >
     </div>
 
     <div class="container mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 flex items-center justify-center gap-2">
-                My <span class="text-[#44f688]">Education</span>
+                My <span class="text-[var(--acc-primary)]">Education</span>
             </h2>
             <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
                 Academic trajectory and technical specialization programs.
@@ -31,15 +31,15 @@ const education = [
         <div class="max-w-4xl mx-auto space-y-8">
             {education.map((edu) => (
                 <div class="bg-card p-8 md:p-10 group relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#44f688]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-[var(--acc-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     
                     <div class="flex flex-col md:flex-row gap-8 relative z-10">
                         <!-- School Info -->
                         <div class="md:w-1/3 space-y-4">
                             <div class="flex items-center gap-4">
                                 <div>
-                                    <h3 class="text-xl font-bold text-white group-hover:text-[#44f688] transition-colors">{edu.school}</h3>
-                                    <p class="text-[#44f688] text-xs font-mono font-bold tracking-tighter uppercase">{edu.field}</p>
+                                    <h3 class="text-xl font-bold text-white group-hover:text-[var(--acc-primary)] transition-colors">{edu.school}</h3>
+                                    <p class="text-[var(--acc-primary)] text-xs font-mono font-bold tracking-tighter uppercase">{edu.field}</p>
                                 </div>
                             </div>
                             <div class="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-sm">
@@ -66,7 +66,7 @@ const education = [
 
                     <!-- Decorative background icon -->
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-[0.05] group-hover:opacity-[0.12] transition-all duration-700 pointer-events-none group-hover:rotate-12 group-hover:scale-110">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#44f688" stroke-width="0.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--acc-primary)" stroke-width="0.5">
                             <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                             <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                         </svg>

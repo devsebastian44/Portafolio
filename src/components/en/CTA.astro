@@ -20,7 +20,7 @@ const devSebastianPattern: Record<number, number[]> = {
 >
     <div class="container mx-auto px-6 relative z-10">
         <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
-            Ready to <span class="text-[#44f688]">Collaborate?</span>
+            Ready to <span class="text-[var(--acc-primary)]">Collaborate?</span>
         </h2>
         <p
             class="text-slate-400 text-sm md:text-base max-w-xl mx-auto mb-16 leading-relaxed"
@@ -34,7 +34,7 @@ const devSebastianPattern: Record<number, number[]> = {
             class="bg-card p-5 md:p-8 mb-16 relative overflow-hidden group max-w-5xl mx-auto"
         >
             <div
-                class="absolute inset-0 bg-gradient-to-br from-[#44f688]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                class="absolute inset-0 bg-gradient-to-br from-[var(--acc-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
             >
             </div>
 
@@ -61,10 +61,10 @@ const devSebastianPattern: Record<number, number[]> = {
                             class="w-3 h-3 rounded-sm bg-slate-900 border border-white/5"
                         >
                         </div>
-                        <div class="w-3 h-3 rounded-sm bg-[#44f688]/40"></div>
-                        <div class="w-3 h-3 rounded-sm bg-[#44f688]/60"></div>
-                        <div class="w-3 h-3 rounded-sm bg-[#44f688]/80"></div>
-                        <div class="w-3 h-3 rounded-sm bg-[#44f688]"></div>
+                        <div class="w-3 h-3 rounded-sm bg-[var(--acc-primary)]/40"></div>
+                        <div class="w-3 h-3 rounded-sm bg-[var(--acc-primary)]/60"></div>
+                        <div class="w-3 h-3 rounded-sm bg-[var(--acc-primary)]/80"></div>
+                        <div class="w-3 h-3 rounded-sm bg-[var(--acc-primary)]"></div>
                     </div>
                     <span class="text-[10px] text-slate-500 uppercase font-mono"
                         >More</span
@@ -85,7 +85,7 @@ const devSebastianPattern: Record<number, number[]> = {
                             >
                                 {Array.from({ length: 7 }).map((_, j) => {
                                     return (
-                                        <div class="matrix-cell w-[10px] h-[10px] md:w-[12px] md:h-[12px] flex items-center justify-center rounded-[2px] transition-all duration-500 text-[#44f688]/20 opacity-30">
+                                        <div class="matrix-cell w-[10px] h-[10px] md:w-[12px] md:h-[12px] flex items-center justify-center rounded-[2px] transition-all duration-500 text-[var(--acc-primary)]/20 opacity-30">
                                             {String.fromCharCode(
                                                 33 +
                                                     Math.floor(
@@ -115,13 +115,13 @@ const devSebastianPattern: Record<number, number[]> = {
                             const cell = cells[randomIndex] as HTMLElement;
 
                             if (Math.random() > 0.92) {
-                                cell.style.color = "#44f688"; // Primary Brand Green (#44f688)
+                                cell.style.color = "var(--acc-primary)"; // Primary Brand Green (var(--acc-primary))
                                 cell.style.opacity = "1";
                                 cell.style.textShadow =
-                                    "0 0 12px rgba(68, 246, 136, 0.8)";
+                                    "0 0 12px rgba(var(--acc-primary-rgb), 0.8)";
                                 cell.style.transform = "scale(1.15)";
                             } else {
-                                cell.style.color = "#052e16"; // Darkest green ([#44f688]/20)
+                                cell.style.color = "#052e16"; // Darkest green ([var(--acc-primary)]/20)
                                 cell.style.opacity = (
                                     Math.random() * 0.5 +
                                     0.1
@@ -170,7 +170,7 @@ const devSebastianPattern: Record<number, number[]> = {
                         stroke-width="2.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="text-[#44f688] w-5 h-5 md:w-7 md:h-7"
+                        class="text-[var(--acc-primary)] w-5 h-5 md:w-7 md:h-7"
                         ><polyline points="16 18 22 12 16 6"
                         ></polyline><polyline points="8 6 2 12 8 18"
                         ></polyline></svg
@@ -193,7 +193,7 @@ const devSebastianPattern: Record<number, number[]> = {
                         stroke-width="2.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="text-[#44f688] w-5 h-5 md:w-7 md:h-7"
+                        class="text-[var(--acc-primary)] w-5 h-5 md:w-7 md:h-7"
                         ><path d="m17 2 4 4-4 4"></path><path
                             d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path
                             d="m7 22-4-4 4-4"></path><path
@@ -217,7 +217,7 @@ const devSebastianPattern: Record<number, number[]> = {
                         stroke-width="2.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="text-[#44f688] w-5 h-5 md:w-7 md:h-7"
+                        class="text-[var(--acc-primary)] w-5 h-5 md:w-7 md:h-7"
                         ><path d="M2 4v16"></path><path
                             d="M2 8h18a2 2 0 0 1 2 2v10"></path><path
                             d="M2 17h20"></path><path d="M6 8v9"></path></svg
@@ -240,7 +240,7 @@ const devSebastianPattern: Record<number, number[]> = {
                         stroke-width="2.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="text-[#44f688] w-5 h-5 md:w-7 md:h-7"
+                        class="text-[var(--acc-primary)] w-5 h-5 md:w-7 md:h-7"
                         ><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"
                         ></path><path d="M7 2v20"></path><path
                             d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"
@@ -276,11 +276,11 @@ const devSebastianPattern: Record<number, number[]> = {
 
             <!-- Decorative Glows -->
             <div
-                class="absolute -z-10 bg-[#44f688]/10 w-full h-full rounded-full blur-[120px]"
+                class="absolute -z-10 bg-[var(--acc-primary)]/10 w-full h-full rounded-full blur-[120px]"
             >
             </div>
             <div
-                class="absolute -z-10 bg-[#44f688]/10 w-[140%] h-[140%] rounded-full blur-[200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50"
+                class="absolute -z-10 bg-[var(--acc-primary)]/10 w-[140%] h-[140%] rounded-full blur-[200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50"
             >
             </div>
         </div>
