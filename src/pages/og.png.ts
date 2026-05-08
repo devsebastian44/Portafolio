@@ -41,7 +41,7 @@ export const GET: APIRoute = async () => {
                     left: 0,
                     right: 0,
                     height: "1px",
-                    backgroundColor: "rgba(68, 246, 136, 0.05)",
+                    backgroundColor: "rgba(63, 229, 131, 0.05)", // Using #3fe583 (Soft Green) for subtle grid
                 },
             },
         });
@@ -76,9 +76,7 @@ export const GET: APIRoute = async () => {
                                 top: "50%",
                                 left: "50%",
                                 transform: "translate(-50%, -50%)",
-                                width: "1200px",
-                                height: "800px",
-                                background: "radial-gradient(circle, rgba(68, 246, 136, 0.15) 0%, transparent 60%)",
+                                background: "radial-gradient(circle, rgba(63, 229, 131, 0.15) 0%, transparent 60%)", // Soft Green glow
                             },
                         },
                     },
@@ -101,8 +99,7 @@ export const GET: APIRoute = async () => {
                         type: "div",
                         props: {
                             style: {
-                                fontSize: "36px",
-                                color: "#44f688",
+                                color: "#3fe583", // Soft Green
                                 fontFamily: "Aldrich",
                                 margin: "0 0 10px 0",
                                 fontWeight: "bold",
