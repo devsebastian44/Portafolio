@@ -3,10 +3,11 @@
 @layer base {
   :root {
     --bg-dark: #000000;
-    --acc-primary: #44f688;
-    /* Clean vibrant neon green */
-    --acc-secondary: #44f688;
-    --acc-accent: #f472b6;
+    --acc-primary: #44f688; /* Verde Esmeralda */
+    --acc-primary-rgb: 68, 246, 136;
+    --acc-secondary: #3fe583; /* Verde Suave */
+    --acc-secondary-rgb: 63, 229, 131;
+    --acc-accent: var(--acc-secondary);
   }
 
   body {
@@ -37,7 +38,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-teal-400 to-pink-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--acc-primary)] via-[var(--acc-secondary)] to-[var(--acc-primary)];
   }
 
   .border-glass {
@@ -49,10 +50,10 @@
   }
 
   .bg-card {
-    background: linear-gradient(145deg, #111111 0%, #050505 100%);
+    background: linear-gradient(145deg, #0a0a0a 0%, #000000 100%);
     @apply border-2 border-white/10 rounded-sm transition-all duration-300 overflow-hidden relative;
     box-shadow: 
-      6px 6px 0px #44f688,
+      6px 6px 0px var(--acc-primary),
       inset 0 0 20px rgba(255, 255, 255, 0.02);
   }
 
@@ -67,17 +68,17 @@
     content: "";
     @apply absolute inset-0 opacity-[0.04] pointer-events-none z-0;
     background-image: 
-      linear-gradient(rgba(68, 246, 136, 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(68, 246, 136, 0.4) 1px, transparent 1px);
+      linear-gradient(rgba(var(--acc-primary-rgb), 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--acc-primary-rgb), 0.4) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
   .bg-card:hover {
-    @apply border-[#44f688]/40;
+    @apply border-[var(--acc-primary)]/40;
     transform: translate(-3px, -3px);
     box-shadow: 
-      10px 10px 0px #44f688,
-      inset 0 0 30px rgba(68, 246, 136, 0.05);
+      10px 10px 0px var(--acc-primary),
+      inset 0 0 30px rgba(var(--acc-primary-rgb), 0.05);
   }
 
   .bg-card:hover::after {
@@ -86,7 +87,7 @@
 
   .bg-card:active {
     transform: translate(2px, 2px);
-    box-shadow: 3px 3px 0px #44f688;
+    box-shadow: 3px 3px 0px var(--acc-primary);
   }
 
   .tag-glass {
@@ -94,8 +95,8 @@
   }
 
   .badge-featured {
-    @apply flex items-center gap-1.5 px-3 py-1.5 bg-[#44f688]/10 border border-[#44f688]/30 rounded-full text-[10px] font-bold text-[#44f688] uppercase tracking-wider;
-    box-shadow: 0 0 15px rgba(68, 246, 136, 0.1);
+    @apply flex items-center gap-1.5 px-3 py-1.5 bg-[var(--acc-primary)]/10 border border-[var(--acc-primary)]/30 rounded-full text-[10px] font-bold text-[var(--acc-primary)] uppercase tracking-wider;
+    box-shadow: 0 0 15px rgba(var(--acc-primary-rgb), 0.1);
   }
 
   .status-dot {
@@ -109,7 +110,7 @@
 
   /* Cyberpunk Terminal Styles */
   .btn-terminal-solid {
-    @apply px-6 py-3 bg-[#44f688] text-black font-mono font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center gap-2;
+    @apply px-6 py-3 bg-[var(--acc-primary)] text-black font-mono font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center gap-2;
     box-shadow: 4px 4px 0 rgba(255, 255, 255, 1);
   }
 
@@ -121,7 +122,7 @@
 
   /* .EXE Button Variant */
   .btn-exe {
-    @apply px-8 py-4 bg-[#44f688] text-[#050505] font-mono font-black uppercase tracking-tighter rounded-sm transition-all duration-200 flex items-center justify-center gap-3 relative overflow-hidden;
+    @apply px-8 py-4 bg-[var(--acc-primary)] text-[#000000] font-mono font-black uppercase tracking-tighter rounded-sm transition-all duration-200 flex items-center justify-center gap-3 relative overflow-hidden;
     box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.9);
   }
 
@@ -138,9 +139,9 @@
 
   /* Navbar Redesign Styles (Inverted / Dark) */
   .nav-terminal-box {
-    background: linear-gradient(145deg, #111111 0%, #050505 100%);
+    background: linear-gradient(145deg, #0a0a0a 0%, #000000 100%);
     @apply border-2 border-white/10 flex items-center transition-all duration-200 rounded-sm overflow-hidden relative;
-    box-shadow: 6px 6px 0px #44f688;
+    box-shadow: 6px 6px 0px var(--acc-primary);
   }
 
   .nav-terminal-box::before {
@@ -153,24 +154,24 @@
     content: "";
     @apply absolute inset-0 opacity-[0.03] pointer-events-none z-0;
     background-image: 
-      linear-gradient(rgba(68, 246, 136, 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(68, 246, 136, 0.3) 1px, transparent 1px);
+      linear-gradient(rgba(var(--acc-primary-rgb), 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--acc-primary-rgb), 0.3) 1px, transparent 1px);
     background-size: 15px 15px;
   }
 
   .nav-terminal-box:hover {
     transform: translate(-1px, -1px);
-    box-shadow: 8px 8px 0px #44f688;
+    box-shadow: 8px 8px 0px var(--acc-primary);
   }
 
   .nav-dot-pattern {
-    background-image: radial-gradient(circle, #44f688 1px, transparent 1px);
+    background-image: radial-gradient(circle, var(--acc-primary) 1px, transparent 1px);
     background-size: 24px 24px;
     opacity: 0.05;
   }
 
   .nav-link-terminal {
-    @apply px-4 py-2 text-[12px] font-mono font-bold text-white hover:text-black hover:bg-[#44f688] transition-all uppercase flex items-center gap-1;
+    @apply px-4 py-2 text-[12px] font-mono font-bold text-white hover:text-black hover:bg-[var(--acc-primary)] transition-all uppercase flex items-center gap-1;
   }
 
   /* Terminal Status Badge */
@@ -180,12 +181,12 @@
   }
 
   .btn-terminal-outline {
-    @apply px-6 py-3 bg-transparent border border-[#44f688] text-[#44f688] font-mono font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center gap-2;
+    @apply px-6 py-3 bg-transparent border border-[var(--acc-primary)] text-[var(--acc-primary)] font-mono font-bold uppercase tracking-wider rounded-sm transition-all duration-300 flex items-center gap-2;
   }
 
   .btn-terminal-outline:hover {
-    @apply bg-[#44f688]/10;
-    box-shadow: 0 0 15px rgba(68, 246, 136, 0.2);
+    @apply bg-[var(--acc-primary)]/10;
+    box-shadow: 0 0 15px rgba(var(--acc-primary-rgb), 0.2);
   }
 
   .status-online {
@@ -193,8 +194,8 @@
   }
 
   .status-online span {
-    @apply w-2 h-2 rounded-full bg-[#44f688] animate-pulse;
-    box-shadow: 0 0 8px #44f688;
+    @apply w-2 h-2 rounded-full bg-[var(--acc-primary)] animate-pulse;
+    box-shadow: 0 0 8px var(--acc-primary);
   }
 
   .animate-ticker {
@@ -205,8 +206,8 @@
 
   .bg-grid-cyber {
     background-image:
-      linear-gradient(to right, rgba(68, 246, 136, 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(68, 246, 136, 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgba(var(--acc-primary-rgb), 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(var(--acc-primary-rgb), 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
