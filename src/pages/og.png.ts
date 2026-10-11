@@ -13,7 +13,7 @@ export const GET: APIRoute = async () => {
     const robotoFont = await fs.readFile(path.join(fontsDir, "RobotoCondensed-Regular.ttf"));
 
     // Prepare Grid Elements (Lines)
-    const step = 50;
+    const step = 30;
     const vLines = [];
     for (let x = 0; x <= 1200; x += step) {
         vLines.push({
@@ -25,7 +25,7 @@ export const GET: APIRoute = async () => {
                     top: 0,
                     bottom: 0,
                     width: "1px",
-                    backgroundColor: "rgba(255, 255, 255, 0.05)", // Matching bg-grid-cyber opacity
+                    backgroundColor: "rgba(255, 255, 255, 0.06)", // Matching bg-grid-cyber
                 },
             },
         });
@@ -41,7 +41,7 @@ export const GET: APIRoute = async () => {
                     left: 0,
                     right: 0,
                     height: "1px",
-                    backgroundColor: "rgba(63, 229, 131, 0.05)", // Using #3fe583 (Soft Green) for subtle grid
+                    backgroundColor: "rgba(255, 255, 255, 0.06)", // Matching bg-grid-cyber
                 },
             },
         });
