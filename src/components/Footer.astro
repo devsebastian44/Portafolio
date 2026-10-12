@@ -7,8 +7,14 @@ const socialLinks = [
 ---
 
 <footer
-    class="pt-10 pb-6 relative border-t border-white/10 bg-white/[0.02] backdrop-blur-xl"
+    class="pt-12 pb-8 relative border-t border-white/10 overflow-hidden group"
+    style="background: linear-gradient(145deg, #0a0a0a 0%, #000000 100%);"
 >
+    <!-- Micro-cuadrícula blueprint (matching the cards: 6% fija, 8.5% en hover) -->
+    <div
+        class="absolute inset-0 bg-grid-blueprint opacity-[0.06] group-hover:opacity-[0.085] transition-opacity duration-300 pointer-events-none z-0"
+    >
+    </div>
     <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-7xl mx-auto">
             <div
@@ -19,14 +25,14 @@ const socialLinks = [
                     <div class="space-y-3">
                         <a
                             href="/"
-                            class="text-2xl font-bold text-white tracking-tighter flex items-center gap-2"
+                            class="text-2xl font-bold text-white tracking-tighter flex items-center gap-2 font-['Aldrich']"
                         >
                             <img
                                 src="/Img/favicon.png"
                                 alt="DevSebastian Logo"
                                 class="w-8 h-8 object-contain drop-shadow-[0_0_10px_var(--acc-primary)]"
                             />
-                            DevSebastian
+                            devsebastian
                         </a>
                         <p class="text-slate-400 text-sm leading-relaxed">
                             Creando experiencias digitales con código limpio,
@@ -248,7 +254,7 @@ const socialLinks = [
                 class="pt-4 border-t border-white/5 flex flex-col justify-center items-center text-center gap-2"
             >
                 <div class="text-slate-500 text-xs font-medium leading-relaxed">
-                    Copyright © 2025 Sebastian Zhunaula. All rights reserved.
+                    Copyright © {currentYear} Sebastian Zhunaula. All rights reserved.
                 </div>
             </div>
         </div>

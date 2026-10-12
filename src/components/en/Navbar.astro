@@ -40,13 +40,13 @@ const navLinks = [
 
 <header
     x-data="{ isOpen: false }"
-    class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-2 transition-all duration-300"
+    class="fixed top-0 left-0 right-0 z-50 px-3 md:px-6 pt-3 md:pt-4 transition-all duration-300"
 >
     <nav
-        class="max-w-[1440px] mx-auto flex flex-wrap md:flex-nowrap items-center justify-between gap-4 relative z-10 px-4"
+        class="w-full max-w-[1560px] mx-auto nav-terminal-box px-6 md:px-8 py-3 md:py-3.5 flex items-center justify-between gap-4 relative z-10"
     >
-        <!-- Brand / Logo Box -->
-        <a href="/" class="nav-terminal-box px-6 py-3 group gap-3">
+        <!-- Brand / Logo Link -->
+        <a href="/" class="flex items-center gap-3 group py-1">
             <div class="relative flex items-center justify-center">
                 <div
                     class="absolute inset-0 bg-[var(--acc-primary)]/20 blur-md rounded-full group-hover:bg-[var(--acc-primary)]/30 transition-colors duration-500"
@@ -55,24 +55,24 @@ const navLinks = [
                 <img
                     src="/Img/favicon.png"
                     alt="DevSebastian Logo"
-                    class="w-8 h-8 object-contain group-hover:rotate-12 transition-transform duration-500 relative z-10"
+                    class="w-7 h-7 md:w-8 md:h-8 object-contain group-hover:rotate-12 transition-transform duration-500 relative z-10"
                 />
             </div>
             <span
-                class="text-xl md:text-2xl font-black text-white tracking-tighter uppercase font-['Aldrich'] group-hover:text-[var(--acc-primary)] transition-colors"
+                class="text-xl md:text-2xl font-bold text-white tracking-tight font-['Aldrich'] group-hover:text-[var(--acc-primary)] transition-colors"
             >
-                DevSebastian<span class="text-[var(--acc-primary)]">.exe</span>
+                devsebastian<span class="text-[var(--acc-primary)]">.exe</span>
             </span>
         </a>
 
         <!-- Desktop Nav Box -->
-        <div class="!hidden md:!flex nav-terminal-box overflow-hidden">
+        <div class="hidden md:flex items-center h-full">
             <div class="flex items-center">
                 {
                     navLinks.map((link) => (
                         <a
                             href={link.href}
-                            class="nav-link-terminal border-r border-black/10 last:border-r-0"
+                            class="nav-link-terminal"
                         >
                             {link.name.toUpperCase()}
                         </a>
@@ -82,11 +82,11 @@ const navLinks = [
 
             <!-- Action Button & Language Switcher -->
             <div
-                class="flex items-center border-l-2 border-white/10 ml-2 h-full"
+                class="flex items-center border-l-2 border-white/10 ml-4 pl-4 h-full"
             >
                 <a
                     href="/"
-                    class="px-6 py-4 bg-[var(--acc-primary)] text-black font-mono font-bold text-[12px] uppercase hover:bg-white transition-all rounded-l-none"
+                    class="px-6 py-2.5 bg-[var(--acc-primary)] text-black font-mono font-bold text-[12px] uppercase hover:bg-white transition-all rounded-sm"
                 >
                     ES_ES
                 </a>
@@ -94,23 +94,23 @@ const navLinks = [
         </div>
 
         <!-- Mobile Controls (Visible only on mobile) -->
-        <div class="flex md:hidden items-center gap-2">
+        <div class="flex md:hidden items-center">
             <button
-                class="nav-terminal-box p-3 focus:outline-none group bg-black hover:bg-[var(--acc-primary)] transition-colors"
-                style="box-shadow: 4px 4px 0px var(--acc-primary);"
+                class="p-2.5 focus:outline-none group bg-white/5 hover:bg-[var(--acc-primary)] transition-colors border border-white/10 rounded-sm"
                 @click="isOpen = !isOpen"
+                aria-label="Toggle navigation menu"
             >
                 <div class="flex flex-col gap-1.5">
                     <div
-                        class="w-8 h-[2px] bg-[var(--acc-primary)] group-hover:bg-black transition-all"
+                        class="w-7 h-[2px] bg-[var(--acc-primary)] group-hover:bg-black transition-all"
                     >
                     </div>
                     <div
-                        class="w-10 h-[2px] bg-white group-hover:bg-black transition-all"
+                        class="w-8 h-[2px] bg-white group-hover:bg-black transition-all"
                     >
                     </div>
                     <div
-                        class="w-6 h-[2px] bg-[var(--acc-primary)] group-hover:bg-black transition-all ml-auto"
+                        class="w-5 h-[2px] bg-[var(--acc-primary)] group-hover:bg-black transition-all ml-auto"
                     >
                     </div>
                 </div>

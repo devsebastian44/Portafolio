@@ -21,12 +21,14 @@ import Footer from "../components/en/Footer.astro";
     <main>
         <Hero />
         <About />
-        <Projects />
-        <Experience />
-        <Education />
-        <Certifications />
-        <CTA />
-        <Contact />
+        <div class="flex flex-col gap-6 md:gap-8">
+            <Projects />
+            <Experience />
+            <Education />
+            <Certifications />
+            <CTA />
+            <Contact />
+        </div>
     </main>
     <Footer />
 </Layout>

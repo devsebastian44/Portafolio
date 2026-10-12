@@ -24,14 +24,14 @@
                     <button
                         @click="activeTab = 'cyber'"
                         :class="activeTab === 'cyber' ? 'border-[var(--acc-primary)] text-[var(--acc-primary)] bg-[var(--acc-primary)]/10 shadow-[0_0_20px_rgba(68,246,136,0.15)]' : 'border-white/10 text-slate-400 hover:border-white/20 hover:text-white'"
-                        class="px-8 py-3 border rounded-xl font-mono text-xs uppercase tracking-widest transition-all duration-300"
+                        class="px-8 py-3 border rounded-sm font-mono text-xs uppercase tracking-widest transition-all duration-300"
                     >
                         Cybersecurity
                     </button>
                     <button
                         @click="activeTab = 'ai'"
                         :class="activeTab === 'ai' ? 'border-[var(--acc-primary)] text-[var(--acc-primary)] bg-[var(--acc-primary)]/10 shadow-[0_0_20px_rgba(68,246,136,0.15)]' : 'border-white/10 text-slate-400 hover:border-white/20 hover:text-white'"
-                        class="px-8 py-3 border rounded-xl font-mono text-xs uppercase tracking-widest transition-all duration-300"
+                        class="px-8 py-3 border rounded-sm font-mono text-xs uppercase tracking-widest transition-all duration-300"
                     >
                         AI & Data Lab
                     </button>
@@ -236,7 +236,7 @@
                         >
                             <div class="flex gap-4">
                                 <div
-                                    class="w-8 h-8 rounded-lg bg-[var(--acc-primary)]/10 border border-[var(--acc-primary)]/30 flex items-center justify-center flex-shrink-0"
+                                    class="w-8 h-8 rounded-sm bg-[var(--acc-primary)]/10 border border-[var(--acc-primary)]/30 flex items-center justify-center flex-shrink-0"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -255,7 +255,7 @@
                                     >
                                 </div>
                                 <div
-                                    class="p-4 bg-white/5 border border-white/10 rounded-2xl rounded-tl-none"
+                                    class="p-4 bg-white/5 border border-white/10 rounded-sm"
                                 >
                                     <p
                                         class="text-sm text-slate-300 leading-relaxed"
@@ -269,7 +269,7 @@
                             </div>
                             <div class="flex gap-4 justify-end">
                                 <div
-                                    class="p-4 bg-[var(--acc-primary)]/10 border border-[var(--acc-primary)]/30 rounded-2xl rounded-tr-none"
+                                    class="p-4 bg-[var(--acc-primary)]/10 border border-[var(--acc-primary)]/30 rounded-sm"
                                 >
                                     <p
                                         class="text-sm text-[var(--acc-primary)] leading-relaxed"
@@ -280,7 +280,7 @@
                             </div>
                             <div class="flex gap-4 animate-fadeIn">
                                 <div
-                                    class="w-8 h-8 rounded-lg bg-[var(--acc-primary)]/10 border border-[var(--acc-primary)]/30 flex items-center justify-center flex-shrink-0"
+                                    class="w-8 h-8 rounded-sm bg-[var(--acc-primary)]/10 border border-[var(--acc-primary)]/30 flex items-center justify-center flex-shrink-0"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +299,7 @@
                                     >
                                 </div>
                                 <div
-                                    class="p-4 bg-white/5 border border-white/10 rounded-2xl rounded-tl-none"
+                                    class="p-4 bg-white/5 border border-white/10 rounded-sm"
                                 >
                                     <p
                                         class="text-sm text-slate-300 leading-relaxed font-mono"
@@ -320,7 +320,7 @@
                                     type="text"
                                     placeholder="Query system..."
                                     disabled
-                                    class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-slate-400 cursor-not-allowed italic"
+                                    class="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm text-slate-400 cursor-not-allowed italic"
                                 />
                                 <div
                                     class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-mono text-slate-600"
@@ -347,18 +347,18 @@
                                         Accuracy vs Loss
                                     </p>
                                 </div>
-                                <div class="p-3 bg-[var(--acc-primary)]/10 rounded-xl">
+                                <div class="p-3 bg-[var(--acc-primary)]/10 rounded-sm">
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="var(--acc-primary)"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        ><path d="M3 3v18h18"></path><path
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         width="20"
+                                         height="20"
+                                         viewBox="0 0 24 24"
+                                         fill="none"
+                                         stroke="var(--acc-primary)"
+                                         stroke-width="2"
+                                         stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         ><path d="M3 3v18h18"></path><path
                                             d="m19 9-5 5-4-4-3 3"></path></svg
                                     >
                                 </div>
@@ -374,7 +374,7 @@
                         <div class="space-y-4">
                             <div class="grid grid-cols-2 gap-4">
                                 <div
-                                    class="bg-white/5 p-4 rounded-xl border border-white/5"
+                                    class="bg-white/5 p-4 rounded-sm border border-white/5"
                                 >
                                     <p
                                         class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1"
@@ -386,7 +386,7 @@
                                     </p>
                                 </div>
                                 <div
-                                    class="bg-white/5 p-4 rounded-xl border border-white/5"
+                                    class="bg-white/5 p-4 rounded-sm border border-white/5"
                                 >
                                     <p
                                         class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1"
@@ -401,7 +401,7 @@
                                 </div>
                             </div>
                             <div
-                                class="flex items-center justify-center py-2.5 px-4 border border-[var(--acc-primary)]/20 bg-[var(--acc-primary)]/5 rounded-xl group/status hover:border-[var(--acc-primary)]/40 transition-colors"
+                                class="flex items-center justify-center py-2.5 px-4 border border-[var(--acc-primary)]/20 bg-[var(--acc-primary)]/5 rounded-sm group/status hover:border-[var(--acc-primary)]/40 transition-colors"
                             >
                                 <div class="flex items-center gap-3">
                                     <div
